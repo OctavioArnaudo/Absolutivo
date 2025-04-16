@@ -1,0 +1,30 @@
+Un personaje mágico atraviesa un bosque encantado lleno de vegetacion
+hasta llegar a un río congelado, donde enfrenta al temible jefe final
+
+Un elfo sigiloso, envuelto en una capucha y una capa que oculta sus armas,
+se desplaza con agilidad, aparentando estar desarmado a simple vista.
+
+Un bosque cubierto de niebla, con terrenos irregulares y texturas diversas,
+donde enemigos acechan entre árboles, rocas y arbustos, listos para emboscar al viajero.
+
+Tras bajar de una barcaza,
+el elfo atraviesa el bosque hasta el río congelado,
+enfrentando emboscadas desarmado, usando su destreza para desarmar enemigos y eliminarles con ellas,
+antes de luchar contra el jefe final con las armas recolectadas o solo con su habilidad
+
+genero de juegos de plataformas
+platform games o platformers / plataformeros
+mecánicas
+Saltos y movilidad entre plataformas, evitando caídas y obstáculos
+Diseño de niveles: terrenos variados, como acantilados, cuevas, estructuras flotantes y zonas interactivas.
+Enemigos y desafíos: Criaturas o trampas
+Poderes y mejoras: doble salto, velocidad extra o ataques mejorados.
+Coleccionables: Monedas, gemas o ítems que desbloquean
+Jefes finales
+Pixel art, 3D estilizado o gráficos realistas.
+
+Deslizamiento y agarre: por superficies inclinadas o colgarse de bordes
+Manipulación de la gravedad: cambiar la dirección de la gravedad para moverse
+Plataformas generadas en tiempo real: niveles que cambian dinámicamente.
+Transformaciones del personaje: cambiar de forma para acceder a nuevas habilidades.
+Movimiento basado en ritmo: siguiendo el ritmo de la música para ejecutar acciones.
