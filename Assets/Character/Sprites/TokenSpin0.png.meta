@@ -1,45 +1,48 @@
 fileFormatVersion: 2
-guid: e09bb702836b6eb419627862803649d0
+guid: c36b0e54a8d8340759ab2f1394787f1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7870276711496609559
-    second: PlayerRun_0
+      213: 21300000
+    second: Collectable_Spin_0
   - first:
-      213: 1728719941392088379
-    second: PlayerRun_1
+      213: 21300002
+    second: Collectable_Spin_1
   - first:
-      213: 5511062410843008217
-    second: PlayerRun_2
+      213: 21300004
+    second: Collectable_Spin_2
   - first:
-      213: 1354115375237695471
-    second: PlayerRun_3
+      213: 21300006
+    second: Collectable_Spin_3
   - first:
-      213: -4522731149510019502
-    second: PlayerRun_4
+      213: 21300008
+    second: Collectable_Spin_4
   - first:
-      213: -3909304355900387050
-    second: PlayerRun_5
+      213: 21300010
+    second: Collectable_Spin_5
   - first:
-      213: -4608814311081262565
-    second: PlayerRun_6
+      213: 21300012
+    second: Collectable_Spin_6
   - first:
-      213: 2216087602722939322
-    second: PlayerRun_7
+      213: 21300014
+    second: Collectable_Spin_7
   - first:
-      213: -8985134737584906019
-    second: PlayerRun_8
+      213: 21300016
+    second: Collectable_Spin_8
   - first:
-      213: -278962620164067431
-    second: PlayerRun_9
+      213: 21300018
+    second: Collectable_Spin_9
   - first:
-      213: 8017326590455878221
-    second: PlayerRun_10
+      213: 21300020
+    second: Collectable_Spin_10
   - first:
-      213: -2879030362889265365
-    second: PlayerRun_11
+      213: 21300022
+    second: Collectable_Spin_11
+  - first:
+      213: 21300024
+    second: Collectable_Spin_12
   externalObjects: {}
-  serializedVersion: 13
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -56,12 +59,11 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMipmapLimit: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -81,10 +83,10 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -99,11 +101,9 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  swizzle: 50462976
-  cookieLightType: 0
+  applyGammaDecoding: 1
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -113,10 +113,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -126,10 +125,9 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,292 +137,311 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerRun_0
+      name: Collectable_Spin_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 182
-        width: 39
-        height: 81
+        x: 0
+        y: 252
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9e01737870927c290800000000000000
-      internalID: -7870276711496609559
+      spriteID: 2e2d0da01b159451a92cc32bb113cb60
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_1
+      name: Collectable_Spin_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 177
-        width: 43
-        height: 80
+        x: 128
+        y: 252
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b3d3fc6a0a5adf710800000000000000
-      internalID: 1728719941392088379
+      spriteID: d3ecb54f880dc4dd3bfb35a2871f7be4
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_2
+      name: Collectable_Spin_2
       rect:
         serializedVersion: 2
-        x: 102
-        y: 183
-        width: 47
-        height: 80
+        x: 256
+        y: 252
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9dc2e45501a3b7c40800000000000000
-      internalID: 5511062410843008217
+      spriteID: 721ecbf93218b4c00819ddadbaf0dab4
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_3
+      name: Collectable_Spin_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 181
-        width: 51
-        height: 80
+        x: 384
+        y: 252
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fe700f562c8cac210800000000000000
-      internalID: 1354115375237695471
+      spriteID: bae1de4dd74fe468f8e40dfcf79345b1
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_4
+      name: Collectable_Spin_4
       rect:
         serializedVersion: 2
-        x: 209
-        y: 188
-        width: 43
-        height: 79
+        x: 512
+        y: 252
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 2567cd26bf70c31c0800000000000000
-      internalID: -4522731149510019502
+      spriteID: 0563b8ccb55e740cc8c13e6d35431856
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_5
+      name: Collectable_Spin_5
       rect:
         serializedVersion: 2
-        x: 4
-        y: 93
-        width: 43
-        height: 81
+        x: 0
+        y: 126
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6119ba3966c5fb9c0800000000000000
-      internalID: -3909304355900387050
+      spriteID: 23e43f09703334fdfb4934709d8ee285
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_6
+      name: Collectable_Spin_6
       rect:
         serializedVersion: 2
-        x: 50
-        y: 91
-        width: 46
-        height: 82
+        x: 128
+        y: 126
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b12c3487dc33a00c0800000000000000
-      internalID: -4608814311081262565
+      spriteID: 6f8fa291b4e074753b9f123e2e19b92e
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_7
+      name: Collectable_Spin_7
       rect:
         serializedVersion: 2
-        x: 104
-        y: 92
-        width: 44
-        height: 84
+        x: 256
+        y: 126
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab1a27feeef11ce10800000000000000
-      internalID: 2216087602722939322
+      spriteID: ff4564980d29c47b88bcc86132df9508
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_8
+      name: Collectable_Spin_8
       rect:
         serializedVersion: 2
-        x: 160
-        y: 89
-        width: 40
-        height: 84
+        x: 384
+        y: 126
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: dd0aa3bbf836e4380800000000000000
-      internalID: -8985134737584906019
+      spriteID: 0447b5b1deeae44d48233c5b2452ccb0
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_9
+      name: Collectable_Spin_9
       rect:
         serializedVersion: 2
-        x: 211
-        y: 90
-        width: 42
-        height: 83
+        x: 512
+        y: 126
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 99f228799fce02cf0800000000000000
-      internalID: -278962620164067431
+      spriteID: 12278d3e50bba4e8e92268c5c5885902
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_10
+      name: Collectable_Spin_10
       rect:
         serializedVersion: 2
-        x: 6
+        x: 0
         y: 0
-        width: 46
-        height: 80
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d429a607e04434f60800000000000000
-      internalID: 8017326590455878221
+      spriteID: 5cdb8860d217447078392769f814c345
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerRun_11
+      name: Collectable_Spin_11
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1
-        width: 40
-        height: 79
+        x: 128
+        y: 0
+        width: 128
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b2fdb628321ab08d0800000000000000
-      internalID: -2879030362889265365
+      spriteID: 7b823fd0de2144ae2a00a69aa5222848
+      internalID: 21300022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Collectable_Spin_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad68f8a7091f74565ba787faf559a1b2
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d89102cdbf12540338c7b1a55ba4eb94
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
-  mipmapLimitGroupName: 
+    nameFileIdTable:
+      Collectable_Spin_10: 21300020
+      Collectable_Spin_12: 21300024
+      Collectable_Spin_2: 21300004
+      Collectable_Spin_1: 21300002
+      Collectable_Spin_4: 21300008
+      Collectable_Spin_11: 21300022
+      Collectable_Spin_5: 21300010
+      Collectable_Spin_6: 21300012
+      Collectable_Spin_3: 21300006
+      Collectable_Spin_8: 21300016
+      Collectable_Spin_7: 21300014
+      Collectable_Spin_9: 21300018
+      Collectable_Spin_0: 21300000
+  spritePackingTag: 
   pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
