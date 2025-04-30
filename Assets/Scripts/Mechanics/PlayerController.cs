@@ -44,6 +44,7 @@ namespace Platformer.Mechanics
 
         void Awake()
         {
+            Debug.Log("aaa");
             health = GetComponent<Health>();
             audioSource = GetComponent<AudioSource>();
             collider2d = GetComponent<Collider2D>();

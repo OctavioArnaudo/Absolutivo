@@ -1,6 +1,7 @@
 using Platformer.Core;
 using Platformer.Model;
 using System;
+using UnityEngine;
 
 namespace Platformer.Gameplay
 {
@@ -25,6 +26,7 @@ namespace Platformer.Gameplay
         {
             var player = model.player;
             //player.controlEnabled = true;
+            Debug.Log("El teclado esta activo");
 
             if (player != null)
             {

@@ -13,7 +13,7 @@ namespace Platformer.Mechanics
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
-        public int maxHP = 1;
+        public int maxHP = 100;
 
         /// <summary>
         /// Indicates if the entity should be considered 'alive'.
@@ -37,6 +37,11 @@ namespace Platformer.Mechanics
         public void Decrement()
         {
             currentHP = Mathf.Clamp(currentHP - 1, 0, maxHP);
+            if (currentHP == currentHP - 1) {
+                Debug.Log("a");
+                var ev = Schedule<HealthIsDown>();
+                ev.health = this;
+            }
             if (currentHP == 0)
             {
                 var ev = Schedule<HealthIsZero>();

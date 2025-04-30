@@ -1,6 +1,7 @@
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
+using UnityEngine;
 
 namespace Platformer.Gameplay
 {
@@ -13,6 +14,7 @@ namespace Platformer.Gameplay
 
         public override void Execute()
         {
+            Debug.Log("A");
             var player = model.player;
             player.collider2d.enabled = true;
             player.controlEnabled = false;
