@@ -3,3 +3,4 @@ ArtifactDB
 SourceAssetDB
 SourceAssetDB-lock
 PackageCache/*
+ShaderCache.db
