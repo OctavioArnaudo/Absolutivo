@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638809668424416886
-    m_Hash: 820586978
+      ticks: 638813919508382558
+    m_Hash: 699766643
   m_LockFileStatus:
     m_FilePath: C:/Users/octav/Saved Games/eloquent-sutherland/app/src/main/cs/com/example/app/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638809668424504867
-    m_Hash: 2200872062
+      ticks: 638813919508392560
+    m_Hash: 2550638424
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -341,8 +341,10 @@ m_ResolvedPackages:
     - 2.5.2
     - 2.6.0
     - 2.7.1
+    - 2.8.1
     compatible:
     - 2.7.1
+    - 2.8.1
     recommended: 2.7.1
     deprecated: []
   dependencies: []
