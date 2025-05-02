@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E4D9382A-B75A-44A2-1AF5-9C1D3E901E90}</ProjectGuid>
+    <ProjectGuid>{3CC76046-65D2-CA00-68D2-05802669299E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2DPlatformer.Tutorials</AssemblyName>

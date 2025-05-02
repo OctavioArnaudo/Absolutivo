@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8C6C8623-8027-C9D9-7EC8-CC74F9C2ADD7}</ProjectGuid>
+    <ProjectGuid>{23AC5981-CC70-5E2A-986F-A63642ADDD44}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1423,15 +1423,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{931036EE-CC9C-8454-A049-58A200A6B1C9}</Project>
+      <Project>{0EEF1272-1F0F-4656-C3C2-F32514556885}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2DPlatformer.Tutorials.csproj">
-      <Project>{E4D9382A-B75A-44A2-1AF5-9C1D3E901E90}</Project>
+      <Project>{3CC76046-65D2-CA00-68D2-05802669299E}</Project>
       <Name>Unity.2DPlatformer.Tutorials</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Platformer.Tutorials.csproj">
-      <Project>{AD31EFCC-4839-DA19-302C-CF083443B211}</Project>
+      <Project>{A3188968-E97F-AE48-5B0F-D2DE2098F001}</Project>
       <Name>Unity.Platformer.Tutorials</Name>
     </ProjectReference>
   </ItemGroup>
