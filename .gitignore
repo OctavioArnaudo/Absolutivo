@@ -6,3 +6,5 @@ ignore.conf
 Temp/
 obj/
 Logs/
+.plastic/
+app/
