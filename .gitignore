@@ -2,3 +2,7 @@
 .vsconfig
 .idea/
 ignore.conf
+.vs/
+Temp/
+obj/
+Logs/

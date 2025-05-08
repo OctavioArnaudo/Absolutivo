@@ -366,8 +366,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Tutorials\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1372.8
-    y: 79.200005
+    x: 1373.8
+    y: 24
     width: 162.19995
     height: 690.8
   m_SerializedDataModeController:
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 537.60004
+    y: 482.4
     width: 1044.6
     height: 232.4
   m_SerializedDataModeController:
@@ -485,7 +485,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 48}
     m_SelectedIDs: 4a0c0100
     m_LastClickedID: 68682
-    m_ExpandedIDs: 000000004a0c01004c0c01004e0c0100500c0100520c0100540c010000ca9a3bffffff7f
+    m_ExpandedIDs: 000000004a0c01004c0c01004e0c0100500c0100520c0100540c0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,8 +594,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1045.6
-    y: 79.200005
+    x: 1046.6
+    y: 24
     width: 325.20007
     height: 690.8
   m_SerializedDataModeController:
@@ -645,7 +645,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 191.8
     height: 432.4
   m_SerializedDataModeController:
@@ -1365,8 +1365,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 192.8
-    y: 79.200005
+    x: 193.8
+    y: 24
     width: 850.8
     height: 432.4
   m_SerializedDataModeController:
@@ -1438,7 +1438,7 @@ MonoBehaviour:
       height: 1152
     m_MinimalGUI: 1
   m_defaultScale: 0.35711804
-  m_LastWindowPixelSize: {x: 1063.5, y: 540.5}
+  m_LastWindowPixelSize: {x: 850.8, y: 432.4}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100

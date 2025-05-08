@@ -3,4 +3,7 @@ ArtifactDB
 SourceAssetDB
 SourceAssetDB-lock
 PackageCache/*
+PackageManager/*
 ShaderCache.db
+Bee/*
+BuildProfiles/*

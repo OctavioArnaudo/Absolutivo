@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0EEF1272-1F0F-4656-C3C2-F32514556885}</ProjectGuid>
+    <ProjectGuid>{931036EE-CC9C-8454-A049-58A200A6B1C9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Core\HeapQueue.cs" />
     <Compile Include="Assets\Scripts\Mechanics\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\Playerjump.cs" />
     <Compile Include="Assets\Scripts\Mechanics\PlayAudioClip.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerSpeedPad.cs" />
     <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
@@ -1420,11 +1421,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2DPlatformer.Tutorials.csproj">
-      <Project>{3CC76046-65D2-CA00-68D2-05802669299E}</Project>
+      <Project>{E4D9382A-B75A-44A2-1AF5-9C1D3E901E90}</Project>
       <Name>Unity.2DPlatformer.Tutorials</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Platformer.Tutorials.csproj">
-      <Project>{A3188968-E97F-AE48-5B0F-D2DE2098F001}</Project>
+      <Project>{AD31EFCC-4839-DA19-302C-CF083443B211}</Project>
       <Name>Unity.Platformer.Tutorials</Name>
     </ProjectReference>
   </ItemGroup>
