@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\Core\Simulation.InstanceRegister.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\Jiggler.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredVictoryZone.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerHealthPickupCollision.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\EmitParticlesOnLand.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerCoinCollision.cs" />
     <Compile Include="Assets\Scripts\UI\MainUIController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredDeathZone.cs" />
     <Compile Include="Assets\Scripts\Gameplay\HealthIsZero.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Scripts\Mechanics\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
     <Compile Include="Assets\Scripts\Gameplay\Playerjump.cs" />
+    <Compile Include="Assets\Scripts\UI\GameController.cs" />
     <Compile Include="Assets\Scripts\Mechanics\PlayAudioClip.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerSpeedPad.cs" />
     <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
@@ -99,6 +102,8 @@
     <Compile Include="Assets\Scripts\Mechanics\TokenController.cs" />
     <Compile Include="Assets\Scripts\Mechanics\TokenInstance.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\SimpleTrigger.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerInventory.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\PlayerHazardCollision.cs" />
     <Compile Include="Assets\Scripts\Gameplay\HealthIsDown.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Backend\TemplateEditorDetection.cs" />
     <Compile Include="Assets\Scripts\Mechanics\GameController.cs" />

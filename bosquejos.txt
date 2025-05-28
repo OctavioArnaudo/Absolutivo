@@ -50,3 +50,15 @@ Art Bible
 
 un juego 2d de aventuras en el que las plataformas corresponden con un fondo inmersivo que se descubre en mas de 4 puntos.
 con la agilidad de un elfo como protagonista, recorre por ramas y terrenos variados un bosque sombrío lleno de enemigos.
+
+"Octavio Arnaudo 1B 2025" pdf
+	arte
+		concepto personaje png
+		moodboard www
+	programación
+		build exe
+	game design
+		concepto nivel png
+		hcd
+	producción
+		captura trello png
