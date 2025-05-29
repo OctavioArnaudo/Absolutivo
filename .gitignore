@@ -15,7 +15,6 @@ Assembly-CSharp.csproj.user
 Builds/
 ExportedObj/
 ignore.conf
-Library/
 Logs/
 obj/
 Temp/
