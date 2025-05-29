@@ -13,14 +13,25 @@ namespace Platformer.Mechanics
         /// <summary>
         /// The maximum hit points for the entity.
         /// </summary>
-        public int maxHP = 100;
+        [Header("Health Settings")]
+        [SerializeField] public int maxHP = 100;
+
+        private int currentHP;
+
+        public int CurrentHealth { get { return currentHP; } }
+        public int MaxHealth { get { return maxHP; } }
 
         /// <summary>
         /// Indicates if the entity should be considered 'alive'.
         /// </summary>
         public bool IsAlive => currentHP > 0;
 
-        int currentHP;
+        public event Action<int, int> OnHealthChanged;
+        public event Action OnPlayerDied;
+
+        void Awake() {
+            currentHP = maxHp;
+        }
 
         /// <summary>
         /// Increment the HP of the entity.
@@ -28,6 +39,15 @@ namespace Platformer.Mechanics
         public void Increment()
         {
             currentHP = Mathf.Clamp(currentHP + 1, 0, maxHP);
+        }
+        public void TakeHeal(int amount)
+        {
+            if(!isAlive) {
+                return;
+            }
+            currentHP += amount;
+            currentHP = Mathf.Min(currentHP, maxHP);
+            OnHealthChanged?.Invoke(currentHP,maxHP);
         }
 
         /// <summary>
@@ -48,18 +68,51 @@ namespace Platformer.Mechanics
                 ev.health = this;
             }
         }
+        public void TakeDamage(int amount)
+        {
+            if (!sAlive) { 
+                return;
+            }
+            currentHP -= amount;
+                currentHP = Mathf.Max(currentHP, 0);
+
+                OnHealthChanged?.Invoke(currentHP, maxHP);
+
+                if (!IsAlive) {
+                    Die();
+                }
+            }
+
+        public void setHealth(int newHP)
+        {
+            currentHP = Mathf.Clamp(newHP, 0, maxHP);
+            OnHealthChanged?.Invoke(currentHP, maxHP);
+            if(!IsAlive) {
+                Die();
+            }
+        }
 
         /// <summary>
         /// Decrement the HP of the entitiy until HP reaches 0.
         /// </summary>
         public void Die()
         {
-            while (currentHP > 0) Decrement();
+            while (isAlive) Decrement();
+            Debug.Log("Player has died");
+            OnPlayerDied?.Invoke();
+            Destroy(gameObject);
         }
 
-        void Awake()
+        void Update()
         {
-            currentHP = maxHP;
+            if (Input.GetKeyUp(KeyCode.Escape)) {
+                TakeDamage(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                TakeHeal(1);
+            }
+            Debug.Log($"Playerhealth: {currentHP}");
         }
+
     }
 }
