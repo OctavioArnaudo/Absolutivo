@@ -14,23 +14,23 @@ namespace Platformer.Mechanics
         /// The maximum hit points for the entity.
         /// </summary>
         [Header("Health Settings")]
-        [SerializeField] public int maxHP = 100;
-
+        [SerializeField] private int maxHP = 100;
         private int currentHP;
 
-        public int CurrentHealth { get { return currentHP; } }
         public int MaxHealth { get { return maxHP; } }
+        public int CurrentHealth { get { return currentHP; } }
 
-        /// <summary>
-        /// Indicates if the entity should be considered 'alive'.
-        /// </summary>
-        public bool IsAlive => currentHP > 0;
+		/// <summary>
+		/// Indicates if the entity should be considered 'alive'.
+		/// </summary>
+		private bool isAlive => currentHP > 0;
+		public bool IsAlive { get { return isAlive; } }
 
-        public event Action<int, int> OnHealthChanged;
+		public event Action<int, int> OnHealthChanged;
         public event Action OnPlayerDied;
 
         void Awake() {
-            currentHP = maxHp;
+            currentHP = maxHP;
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Platformer.Mechanics
         }
         public void TakeDamage(int amount)
         {
-            if (!sAlive) { 
+            if (!isAlive) { 
                 return;
             }
             currentHP -= amount;
@@ -81,7 +81,7 @@ namespace Platformer.Mechanics
                 if (!IsAlive) {
                     Die();
                 }
-            }
+	    }
 
         public void setHealth(int newHP)
         {

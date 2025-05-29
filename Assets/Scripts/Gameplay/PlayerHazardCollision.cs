@@ -1,3 +1,4 @@
+using Platformer.Mechanics;
 using UnityEngine;
 
 public class PlayerHazardCollision : MonoBehaviour
@@ -6,7 +7,7 @@ public class PlayerHazardCollision : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("Hazard"))
 		{
-			PlayerHealth playerHealth = GetComponent<PlayerHealth>();
+			Health playerHealth = GetComponent<Health>();
 			if (playerHealth != null)
 			{
 				playerHealth.Die(); // Mata al jugador instantáneamente

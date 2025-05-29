@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Gameplay\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
     <Compile Include="Assets\Scripts\Mechanics\VictoryZone.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnemyCollision.cs" />
     <Compile Include="Assets\Scripts\Mechanics\Health.cs" />
     <Compile Include="Assets\Scripts\Mechanics\KinematicObject.cs" />

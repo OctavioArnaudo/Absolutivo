@@ -1,4 +1,4 @@
-using Platformer.Gameplay;
+using Platformer.Mechanics;
 using UnityEngine;
 
 public class PlayerHealthPickupCollision : MonoBehaviour
@@ -7,10 +7,10 @@ public class PlayerHealthPickupCollision : MonoBehaviour
 	{
 		if (collision.gameObject.CompareTag("HealthPickup"))
 		{
-			PlayerHealth playerHealth = GetComponent<PlayerHealth>();
+			Health playerHealth = GetComponent<Health>();
 			if (playerHealth != null)
 			{
-				playerHealth.Heal(20); // Suma 20 de vida
+				playerHealth.TakeHeal(20); // Suma 20 de vida
 			}
 			Destroy(collision.gameObject); // Elimina el objeto de salud
 		}

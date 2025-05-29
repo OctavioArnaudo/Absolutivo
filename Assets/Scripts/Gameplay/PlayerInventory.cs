@@ -12,7 +12,7 @@ namespace Platformer.Gameplay
 		[Header("Inventory Settings")]
 		[SerializeField] private int inventoryCapacity = 3;
 
-		public List<CoinsItem> items = new List<CoinsItem> ();
+		public List<InventoryItem> items = new List<InventoryItem> ();
 
 		void Awake()
 		{
@@ -25,23 +25,23 @@ namespace Platformer.Gameplay
 			instance = this;
 		}
 
-		public bool AddItem(CoinsItem item)
+		public bool AddItem(InventoryItem item)
 		{
 			if (items.Count > inventoryCapacity) {
 				Debug.Log("Inventory is full");
 				return false;
 			}
 			items.Add(item);
-			OnInventoryChanged?.Invoke();
+			OnInventoryChanged?.Invoke(instance);
 			Debug.Log($"Added item: {item.name}");
 			return true;
 		}
 
-		public bool RemoveItem(CoinsItem item)
+		public bool RemoveItem(InventoryItem item)
 		{
 			bool removed = items.Remove(item);
 			if (removed) {
-				OnInventoryChanged?.Invoke();
+				OnInventoryChanged?.Invoke(instance);
 				Debug.Log($"Removed item: {item.name}");
 			} else {
 				Debug.Log($"Could not find item to remove: {item.name}");
@@ -49,7 +49,7 @@ namespace Platformer.Gameplay
 			return removed;
 		}
 
-		public bool UseItem(CoinsItem item) {
+		public bool UseItem(InventoryItem item) {
 			if (items.Contains(item))
 			{
 				item.Use();
@@ -60,10 +60,11 @@ namespace Platformer.Gameplay
 			{
 				Debug.Log($"Cannot use ${item.name}: not in inventory");
 			}
+			return false;
 		}
 
-		public List<CoinsList> GetItems() {
-			return new List<CoinsList>(items);
+		public List<InventoryItem> GetItems() {
+			return new List<InventoryItem>(items);
 		}
 
 		void Update()
@@ -71,7 +72,7 @@ namespace Platformer.Gameplay
 			if (Input.GetKeyDown(KeyCode.I)) {
 				Debug.Log("Current Inventory:");
 				foreach (var coin in items) {
-					Debug.Log("- " + items.name);
+					Debug.Log("- " + coin.name);
 				}
 			}
 		}

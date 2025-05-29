@@ -110,17 +110,17 @@ namespace Platformer.Gameplay
 			}
 		}
 
-		private void OnCollisionEnter2D(Collision2D collision)
-		{
-			if (collision.gameObject.CompareTag("Enemy"))
+			private void OnCollisionEnter2D(Collision2D collision)
 			{
-				PlayerHealth playerHealth = GetComponent<PlayerHealth>();
-				if (playerHealth != null)
+				if (collision.gameObject.CompareTag("Enemy"))
 				{
-					playerHealth.TakeDamage(10); // Resta 10 de vida
+					Health playerHealth = collision.gameObject.GetComponent<Health>();
+					if (playerHealth != null)
+					{
+						playerHealth.TakeDamage(10); // Resta 10 de vida
+					}
 				}
 			}
-		}
 
 
 	}

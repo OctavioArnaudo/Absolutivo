@@ -8,9 +8,10 @@ public class PlayerCoinCollision : MonoBehaviour
 		if (collision.gameObject.CompareTag("Coin"))
 		{
 			PlayerInventory inventory = GetComponent<PlayerInventory>();
+			InventoryItem item = GetComponent<InventoryItem>();
 			if (inventory != null)
 			{
-				inventory.AddCoins(1); // Suma una moneda al inventario
+				bool isAdded = inventory.AddItem(item); // Suma una moneda al inventario
 			}
 			Destroy(collision.gameObject); // Elimina la moneda
 		}

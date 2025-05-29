@@ -1,5 +1,4 @@
 using System.Diagnostics;
-using System.Diagnostics.Contracts;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Inventory/Item")]
@@ -14,6 +13,6 @@ public class InventoryItem : ScriptableObject
 
     public virtual void Use()
     {
-        Debug.Log("Using " + item);
+        UnityEngine.Debug.Log("Using " + name);
     }
 }
