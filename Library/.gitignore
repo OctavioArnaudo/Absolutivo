@@ -7,3 +7,4 @@ PackageManager/
 ShaderCache.db
 SourceAssetDB
 SourceAssetDB-lock
+StateCache/
