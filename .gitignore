@@ -9,9 +9,7 @@
 .plastic/
 .vs/
 app/
-Assembly-CSharp.csproj.user
 Builds/
-ExportedObj/
 ignore.conf
 Logs/
 obj/
