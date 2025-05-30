@@ -1,9 +1,3 @@
-*.log
-*.meta
-*.sln
-*.sln.user
-*.suo
-*.unityproj
 .DS_Store
 .idea/
 .plastic/

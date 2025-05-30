@@ -1,9 +1,9 @@
-ArtifactDB-lock
 ArtifactDB
+ArtifactDB-lock
+Bee/
+BuildProfiles/
+PackageCache/
+PackageManager/
+ShaderCache.db
 SourceAssetDB
 SourceAssetDB-lock
-PackageCache/*
-PackageManager/*
-ShaderCache.db
-Bee/*
-BuildProfiles/*
