@@ -1,0 +1,442 @@
+Concepto	M1 - 2025-06-09 - Visión Inicial	Definición de la idea central del juego.	 	SUMA
+Visión del Proyecto	Reunión inicial con cliente	Entender expectativas y visión del cliente.	P (Alta)	2
+Visión del Proyecto	Definir premisa y género del juego	Establecer idea central y categoría.	GD (Alta)	2
+Visión del Proyecto	Definir estilo visual general	Establecer dirección artística y tono.	GD (Media)	2
+Planificación General	Establecer cronograma de hitos	Definir fases y entregables clave.	P (Alta)	2
+Investigación	Investigar juegos similares y tendencias	Analizar competidores y oportunidades.	GD (Media)	3
+Investigación	Recopilar referencias de arte conceptual	Imágenes y concept art visual.	ART (Media)	2
+Concepto	M2 - 2025-06-20 - Concepto Detallado y Preliminares	Documentos clave y bocetos iniciales.	 	SUMA
+Documentación	Redactar High Concept Document	Documento breve para aprobación inicial.	GD (Alta)	3
+Documentación	Boceto de GDD (Gameplay Core)	Definir mecánicas y flujo de juego.	GD (Alta)	4
+Diseño Visual Previo	Bocetar personaje principal	Esbozos iniciales del protagonista.	ART (Media)	2
+Diseño Visual Previo	Bocetar enemigos y NPCs clave	Diseños preliminares de personajes no jugables.	ART (Media)	2
+Diseño Visual Previo	Bocetar objetos e ítems principales	Esbozos de herramientas y elementos interactivos.	ART (Media)	1
+Diseño de Audio	Definir sonido ambiente	Establecer atmósfera sonora.	S (Media)	2
+Diseño de Audio	Conceptualizar estilo musical	Definir tipo de música y referencias.	S (Media)	2
+Concepto	M3 - 2025-07-04 - Requisitos y Viabilidad Técnica	Evaluación tecnológica y análisis de factibilidad.	 	SUMA
+Requisitos Técnicos	Definir requisitos de hardware	Especificaciones de dispositivos objetivo.	DEV (Alta)	3
+Investigación Técnica	Evaluar motores de desarrollo	Comparar Unity, Unreal Engine, Godot.	DEV (Media)	3
+Investigación Técnica	Seleccionar motor de juego	Decisión final del motor a usar.	DEV (Alta)	1
+Investigación Técnica	Investigar librerías externas	Evaluar uso de soluciones existentes.	DEV (Media)	2
+Investigación Técnica	Análisis de viabilidad técnica	Determinar si la visión es alcanzable.	DEV (Alta)	3
+Preproducción	M4 - 2025-07-16 - Diseño Detallado de Nivel 1	Estructura pormenorizada del nivel inicial.	 	SUMA
+Diseño de Nivel	Diseñar layout de Nivel 1	Crear planos y esquemas del primer nivel.	GD (Alta)	3
+Diseño de Nivel	Definir puntos de interés y eventos	Identificar acciones importantes y desafíos.	GD (Alta)	2
+Diseño de Nivel	Diseñar flujo de jugador y rutas	Planificar el recorrido del jugador.	GD (Alta)	2
+Diseño de Interacción	Definir diálogos y eventos (NPCs)	Planificar interacciones narrativas.	GD (Media)	3
+Diseño de Interacción	Definir decisiones y ramificaciones	Establecer caminos alternativos y consecuencias.	GD (Media)	2
+Diseño de Arte	Crear paleta de colores y guía de estilo	Definir la gama cromática y pautas estéticas.	ART (Alta)	3
+Diseño de Arte	Diseñar piezas modulares de entorno	Crear elementos base para escenarios.	ART (Alta)	4
+Preproducción	M5 - 2025-07-29 - Diseño UI y Prototipo Mecánicas	Interfaz detallada e implementación de funcionalidades esenciales.	 	SUMA
+Diseño de Arte	Diseñar UI (HUD, menús, iconos)	Layouts, gráficos e iconos de la interfaz.	ART (Alta)	4
+Mecánicas Básicas	Implementar movimiento del jugador	Programar desplazamiento y salto funcional.	DEV (Alta)	3
+Mecánicas Básicas	Implementar salto y físicas	Programar salto con sus propiedades físicas.	DEV (Alta)	2
+Prueba de Concepto	Prototipar físicas clave	Implementar y testear gravedad, colisión.	DEV (Alta)	3
+Prueba de Concepto	Prototipar interacción con entorno	Implementar botones, puertas, palancas simples.	DEV (Alta)	3
+Preproducción	M6 - 2025-08-11 - Vertical Slice (Demo Funcional)	Pequeña porción jugable del juego.	 	SUMA
+Movimiento básico	Integrar animaciones de movimiento (placeholder)	Animaciones temporales para caminar/saltar.	DEV (Alta)	2
+UI básica	Crear mockup y funcionalidad de HUD	Interfaz mínima funcional (vida, puntuación).	ART (Media)	2
+UI básica	Implementar menú básico (placeholder)	Pantallas de inicio, pausa y navegación.	DEV (Media)	2
+Enemigo inicial	Diseñar comportamiento de enemigo base	Reglas de IA para el enemigo inicial.	GD (Alta)	2
+Enemigo inicial	Crear placeholder y programar lógica	Modelo temporal e implementación de IA.	ART (Media)	3
+Audio base	Crear efectos de sonido temporales	Sonidos para acciones clave (pasos, salto, ataque).	S (Media)	2
+Audio base	Integrar música ambiente temporal	Pistas de audio para el primer nivel.	S (Media)	1
+Nivel base	Construir y ensamblar layout base	Usar piezas modulares para el entorno.	DEV (Alta)	3
+Iteración temprana	Recopilar feedback interno	Obtener opiniones del equipo sobre jugabilidad.	GD (Alta)	2
+Producción	M7 - 2025-08-27 - Core Gameplay Refinado y Assets I	Mecánicas principales y arte final inicial.	 	SUMA
+Implementación Contenido	Diseñar equilibrio de dificultad Nivel 1	Ajustar valores para experiencia desafiante.	GD (Alta)	3
+Implementación Contenido	Diseñar puzzles y desafíos iniciales	Crear primeras secuencias lógicas.	GD (Alta)	3
+Creación Arte	Crear modelo/sprite final personaje principal	Diseño gráfico detallado del protagonista.	ART (Alta)	5
+Creación Arte	Crear animaciones finales personaje	Animaciones de caminar, correr, saltar, reposo.	ART (Alta)	5
+Creación Arte	Crear modelos/sprites entorno (props)	Objetos interactivos y decoración final.	ART (Alta)	4
+Programación Core	Programar sistema de recompensas	Puntos, coleccionables, desbloqueos.	DEV (Alta)	4
+Programación Core	Programar interacción de objetos	Interacción con ítems, palancas, mecanismos.	DEV (Alta)	3
+Producción	M8 - 2025-09-17 - UI Funcional y Combate Cuerpo a Cuerpo	Interfaz integrada y mecánicas de combate básico.	 	SUMA
+Programación UI	Implementar HUD funcional	Integrar gráficos finales de vida, puntuación.	DEV (Alta)	3
+Programación UI	Implementar sistema de menú	Integrar gráficos y funcionalidad (inicio, pausa, opciones).	DEV (Alta)	3
+Creación Audio	Componer música Nivel 1	Crear la pista musical principal del nivel.	S (Alta)	3
+Combate CQC	Diseñar mecánicas ataque cuerpo a cuerpo	Rango, daño, feedback para el jugador.	GD (Alta)	3
+Combate CQC	Crear animaciones ataque cuerpo a cuerpo	Animaciones para ataques del personaje.	ART (Alta)	3
+Combate CQC	Implementar colisiones y daño	Programar detección de golpe y registro.	DEV (Alta)	2
+Sistema Salud	Diseñar sistema de daño y salud	Puntos de vida, efectos de daño, curación.	GD (Alta)	2
+Sistema Salud	Implementar sistema de daño y colisiones	Registro de daño, eliminación de entidades.	DEV (Alta)	3
+Producción	M9 - 2025-10-06 - Combate a Distancia e IA Enemiga	Ataques a distancia y lógica avanzada de enemigos.	 	SUMA
+Combate Distancia	Diseñar mecánicas ataque a distancia	Proyectiles, cooldowns, precisión.	GD (Alta)	3
+Combate Distancia	Crear assets ataque a distancia	Sprites/modelos de proyectiles.	ART (Alta)	2
+Combate Distancia	Programar proyectiles y colisiones	Lanzamiento, trayectoria, impactos.	DEV (Alta)	3
+IA Enemiga	Diseñar patrones de IA avanzada	Patrullas complejas, ataque diferenciado.	GD (Alta)	3
+IA Enemiga	Programar IA avanzada enemigo base	Implementar lógica de comportamiento y estados.	DEV (Alta)	4
+Producción	M10 - 2025-10-20 - Nuevo Enemigo y Refinamientos	Desarrollo completo de un nuevo tipo de enemigo.	 	SUMA
+Nuevo Enemigo	Diseñar comportamiento Fantasma	Definir patrulla, ataque, desaparición.	GD (Alta)	2
+Nuevo Enemigo	Crear documento Fantasma	Descripción detallada y mecánicas.	GD (Alta)	1
+Nuevo Enemigo	Crear diseño visual Fantasma	Bocetos, concept art y modelo inicial.	ART (Alta)	3
+Nuevo Enemigo	Crear animaciones Fantasma	Idle, movimiento, ataque, desaparición.	ART (Alta)	4
+Nuevo Enemigo	Crear sprites/modelos finales Fantasma	Activos 2D/3D finales.	ART (Alta)	2
+Nuevo Enemigo	Crear efectos visuales Fantasma	Efectos de aparición/desaparición.	ART (Alta)	2
+Nuevo Enemigo	Preparar lógica base Fantasma	Estructura de comportamiento en código.	DEV (Alta)	2
+Nuevo Enemigo	Integrar arte Fantasma en juego	Conectar modelos/sprites con lógica.	DEV (Alta)	2
+Nuevo Enemigo	Testear funcionamiento Fantasma	Verificar comportamiento y bugs.	QA (Alta)	2
+Nuevo Enemigo	Ajustar Fantasma (balance/errores)	Pulir funcionamiento y balance.	GD (Alta)	1
+Producción	M11 - 2025-11-06 - Expansión de Niveles y Optimización I	Nuevos niveles y primera fase de optimización.	 	SUMA
+Niveles adicionales	Diseñar layout Nivel 2 y 3	Planificar estructura y desafíos.	GD (Alta)	4
+Niveles adicionales	Construir Nivel 2 y 3	Ensamblar los entornos.	DEV (Alta)	5
+Assets completos	Crear assets de fondo Nivel 2 y 3	Ilustrar elementos de ambiente.	ART (Alta)	4
+Assets completos	Integrar assets definitivos en niveles	Sustituir placeholders con arte final.	DEV (Alta)	3
+Animaciones completas	Crear animaciones finales enemigos	Pulido visual de movimientos de entidades.	ART (Alta)	3
+Integración Arte	Ajustar escala y resolución sprites	Garantizar rendimiento óptimo.	ART (Media)	2
+Optimización Gráfica	Aplicar primeros efectos visuales	Iluminación, sombras, partículas.	ART (Alta)	4
+Producción	M12 - 2025-11-26 - Jefe Final y Sistemas Auxiliares	Combate final y funcionalidades de soporte.	 	SUMA
+Jefe final	Diseñar mecánicas jefe final	Comportamiento, fases de ataque, vulnerabilidades.	GD (Alta)	4
+Jefe final	Crear arte jefe final	Diseño visual detallado del jefe.	ART (Alta)	5
+Jefe final	Crear animaciones jefe final	Secuencias de movimiento complejas.	ART (Alta)	5
+Jefe final	Implementar lógica y combate jefe	Programar IA, ataques, transiciones.	DEV (Alta)	5
+Guardado	Diseñar sistema de guardado/carga	Estructura de datos y lógica de reanudación.	GD (Media)	2
+Guardado	Implementar sistema de guardado	Programar funcionalidad completa.	DEV (Alta)	4
+Compatibilidad	Definir rangos de resolución	Soportar múltiples pantallas y dispositivos.	GD (Media)	2
+Compatibilidad	Implementar ajuste de resolución	Programar manejo de resoluciones.	DEV (Alta)	3
+Producción	M13 - 2025-12-16 - Documentación y Tutorial Final	Documentación técnica y guía de juego completa.	 	SUMA
+Documentación técnica	Redactar documentación base	Estructura del proyecto para mantenimiento.	DEV (Alta)	3
+Tutorial	Diseñar contenido del tutorial	Pasos claros para guiar jugadores.	GD (Alta)	3
+Tutorial	Implementar tutorial interactivo	Programar la guía en el juego.	DEV (Alta)	3
+Postproducción	M14 - 2026-01-07 - Alpha Build y QA Inicial	Primera versión jugable completa y pruebas exhaustivas.	 	SUMA
+Generación Builds	Generar Alpha Build	Compilar primera versión del juego.	DEV (Alta)	2
+QA inicial	QA y testeo Alpha Build	Identificar bugs críticos y problemas de jugabilidad.	QA (Alta)	5
+Correcciones críticas	Corrección de errores Alpha Build	Arreglar fallos graves antes de pruebas externas.	DEV (Alta)	4
+Balance inicial	Ajustes de dificultad Alpha	Ajustar niveles, enemigos, curva de aprendizaje.	GD (Alta)	3
+Rendimiento	Optimización de rendimiento Alpha	Mejora de FPS y reducción de cargas.	DEV (Alta)	5
+Rendimiento	Análisis de memoria Alpha	Identificar y corregir fugas de memoria.	DEV (Alta)	3
+Postproducción	M15 - 2026-01-28 - Pulido Visual y Sonoro I	Refinamiento estético y auditivo.	 	SUMA
+Pulido visual	Pulido general (partículas, atmosféricos)	Añadir efectos visuales avanzados.	ART (Alta)	5
+Pulido visual	Aplicar post-procesado	Ajustar estética visual final.	ART (Alta)	4
+Pulido visual	Ajustar transiciones y animaciones UI	Suavizar flujo visual entre pantallas.	ART (Alta)	3
+Mejoras Audio	Mezclar y masterizar audio final	Ajustar volúmenes, ecualización, efectos.	S (Alta)	5
+Mejoras Audio	Implementar ajustes de volumen	Controles para el jugador (música, SFX, diálogos).	DEV (Media)	2
+Efectos sonido	Integrar efectos de sonido finales	Sincronizar sonidos con eventos.	S (Alta)	4
+Postproducción	M16 - 2026-02-14 - Pulido Visual y Sonoro II	Continuación del refinamiento visual y auditivo.	 	SUMA
+Creación Audio	Componer música adicional	Pistas sonoras para nuevos escenarios y momentos.	S (Alta)	4
+Postproducción	M17 - 2026-02-28 - Beta Build y UX/UI Final	Versión para pruebas externas y UX/UI refinada.	 	SUMA
+Generación Builds	Generar Beta Build	Compilar versión para Beta testing.	DEV (Alta)	2
+UI refinada	Mejora visual UI	Optimizar experiencia de usuario.	ART (Alta)	3
+UI refinada	Implementar feedback visual UI	Confirmación de acciones y errores visuales.	DEV (Alta)	2
+UI refinada	Implementar feedback sonoro UI	Sonidos que confirman acciones de interfaz.	DEV (Alta)	1
+Balance final	Ajustes finos de gameplay y balance	Balance general según pruebas.	GD (Alta)	4
+Integración Tutorial	Implementar tutorial final	Programar guía pulida para el jugador.	DEV (Alta)	3
+Localización	Traducir textos (idiomas primarios)	Preparar strings para lanzamiento.	GD (Media)	4
+Localización	Integrar sistema de localización	Programar carga de idiomas.	DEV (Media)	3
+Postproducción	M18 - 2026-03-24 - Preparación Legal y Marketing I	Revisión legal y materiales promocionales iniciales.	 	SUMA
+Legal	Revisión derechos de autor	Verificar legalidad de material gráfico/sonoro.	P (Media)	3
+Legal	Revisión licencias motores/librerías	Asegurar cumplimiento legal de software.	DEV (Media)	2
+Legal	Generar lista de créditos	Listado completo del equipo y recursos.	GD (Media)	2
+Legal	Implementar pantalla de créditos	Programar visualización de créditos.	DEV (Media)	2
+Visual promocional	Crear capturas de pantalla	Material gráfico para tienda y prensa.	ART (Alta)	3
+Visual promocional	Diseñar logo y elementos de marca	Identidad visual distintiva.	ART (Alta)	2
+Visual promocional	Diseñar banner y miniaturas	Elementos gráficos para marketing.	ART (Alta)	2
+Trailer	Planificar contenido y guion trailer	Definir escenas clave y mensaje.	GD (Alta)	2
+Trailer	Editar trailer del juego	Crear video de presentación.	ART (Alta)	4
+Marketing	Planificar campaña redes sociales	Definir estrategia y cronograma.	GD (Alta)	3
+Marketing	Crear contenido redes sociales	Diseñar activos para la campaña.	ART (Alta)	3
+Publicación	M19 - 2026-04-18 - Golden Master y Configuración Tienda	Versión final y configuración de plataformas.	 	SUMA
+Generación Builds	Generar Golden Master	Compilar versión definitiva para lanzamiento.	DEV (Alta)	2
+Comunicación externa	Redactar textos para store	Título, descripción, instrucciones, requisitos.	GD (Alta)	3
+Publicación	Crear página en Steam/itch.io	Configurar presencia oficial del juego.	GD (Alta)	3
+Publicación	Subir builds a plataforma	Cargar archivos finales al distribuidor.	DEV (Alta)	2
+Validación final	Pruebas "Smoke Test" Golden Master	Verificar inicio y funcionamiento.	QA (Alta)	1
+Validación final	Revisar Golden Master para publicar	Control de calidad final exhaustivo.	DEV (Alta)	4
+Validación final	Pruebas "Sanity Check" post-subida	Verificar build subida en plataforma.	QA (Alta)	1
+Publicación	M20 - 2026-05-09 - Lanzamiento Oficial y Monitoreo	Lanzamiento público y soporte inicial.	 	SUMA
+Publicación	Lanzamiento oficial del juego	Juego público en tiendas digitales.	P (Alta)	1
+Marketing	Monitorear y responder redes sociales	Interactuar con la comunidad.	GD (Media)	3
+Feedback	Recepción inicial de feedback	Recopilar primeros comentarios y reportes.	GD (Media)	3
+Correcciones urgentes	Identificar bugs críticos reportados	Priorizar errores para parche inmediato.	DEV (Alta)	2
+Correcciones urgentes	Desarrollar Hotfix/Parche inicial	Programar y lanzar primera solución.	DEV (Alta)	3
+Datos legales	Archivar licencias y permisos	Documentación para futuras auditorías.	P (Media)	1
+Comunicación externa	Preparar notas de parche/changelog	Registro de cambios para jugadores.	GD (Media)	1
+Mantenimiento	M21 - 2026-05-28 - Soporte Técnico y Análisis Continuo	Monitoreo de errores, métricas y soporte a la comunidad.	 	SUMA
+Soporte técnico	Monitoreo continuo de errores/rendimiento	Vigilancia de estabilidad en dispositivos.	DEV (Alta)	5
+Soporte técnico	Resolución de bugs de compatibilidad	Solución de errores en plataformas/hardware.	DEV (Alta)	4
+Soporte técnico	Resolución de errores críticos	Priorizar y solucionar fallos graves.	DEV (Alta)	3
+Análisis	Revisión periódica de métricas	Evaluar retención, errores, uso de funciones.	GD (Media)	4
+Análisis	Generar informes de análisis	Documentar insights del comportamiento del jugador.	GD (Media)	3
+Comunidad	Gestión de comunidad y soporte	Atender inquietudes en foros y redes.	GD (Media)	5
+Comunidad	Recopilar sugerencias de jugadores	Mantener registro de ideas para actualizaciones.	GD (Media)	3
+Mantenimiento	M22 - 2026-06-25 - Estadísticas y Actualizaciones Menores	Integración de analíticas y contenido extra post-lanzamiento.	 	SUMA
+Estadísticas	Integrar analíticas de juego	Añadir sistemas para recopilación de datos.	DEV (Media)	3
+Estadísticas	Configurar paneles de métricas	Visualizar datos de juego en tiempo real.	GD (Media)	2
+Mini update	Diseñar contenido extra/menor	Planificar adiciones (ítems, modos).	GD (Media)	4
+Mini update	Desarrollar mini-actualización	Implementar nuevo contenido.	DEV (Media)	5
+Mini update	Testear mini-actualización	Verificar nuevo contenido y bugs.	QA (Media)	3
+Mantenimiento	M23 - 2026-07-16 - Balance y Cierre de Proyecto	Ajustes finales y cierre formal del proyecto.	 	SUMA
+Test A/B	Diseñar experimento con ajustes	Probar 2 versiones con pequeños cambios.	GD (Media)	3
+Test A/B	Implementar sistema de Test A/B	Programar funcionalidad para comparar versiones.	DEV (Media)	3
+Balance	Parche de balance post-lanzamiento	Ajustar jugabilidad según datos/comentarios.	GD (Media)	3
+Balance	Implementar ajustes de balance	Programar cambios en parámetros del juego.	DEV (Media)	2
+Análisis retrospectivo	Documentar aprendizajes (Post-mortem)	Reunión interna para registrar experiencias clave.	GD (Media)	3
+Organización final	Organización del proyecto	Archivar todo el material ordenadamente.	P (Media)	2
+Cierre del proyecto	Backup y documentación de cierre	Archivado de materiales, código, assets, licencias.	DEV (Media)	3
+
+
+
+
+
+
+
+
+
+Producción
+Objetivo: Crear un juego funcional con contenido base, jugabilidad estable y arte preliminar.
+10 semanas
+50 días
+
+M1 - Vertical Slide
+Nivel básico jugable con mecánicas principales
+Mostrar la experiencia central con gráficos placeholder 
+10 días
+
+Diseño del primer nivel y layout base
+2 días
+
+Boceto de GDD
+1 día 
+
+Implementación de movimiento y salto
+2 días 
+
+Placeholder de enemigo básico
+1 día 
+
+Mockup HUD y menú básico
+2 días 
+
+Feedback externo + ajustes
+2 días 
+
+M2 – Mecánicas completas
+Juego completo desde lo funcional
+Todo el gameplay funcional: movimiento, ataques, enemigos, colisiones. 
+16 dias
+
+Ataque cuerpo a cuerpo
+2 días 
+
+Ataque a distancia
+2 días 
+
+Sistema de daño + colisiones
+2 días 
+
+IA de enemigos
+2 días 
+
+Implementar HUD funcional
+2 días 
+
+Animaciones básicas integradas
+3 días 
+
+Sonido base (placeholders)
+2 días 
+
+Ajustes de gameplay
+1 día 
+
+M3 – Niveles y contenido
+Contenido artístico, enemigos, UI final
+Juego entero jugable, falta pulido
+24 dias
+
+Diseño y construcción de niveles 2 y 3
+5 días 
+
+Integración de arte definitivo
+4 días 
+
+Creación de assets (fondo, plataformas, enemigos, UI)
+6 días 
+
+Animaciones finales
+3 días 
+
+Implementación del jefe final
+3 días 
+
+Integración de efectos de sonido
+2 días 
+
+Pulido visual y efectos
+1 día
+
+Postproducción
+Finalizar contenido, estabilizar gameplay, preparar versión jugable de principio a fin.
+4 semanas
+20 días
+
+M4 – Alpha
+Versión jugable de inicio a fin
+Testeo completo, se corrigen bugs grandes, se trabaja en optimización
+5 dias
+
+QA personal y testeo completo
+2 días 
+
+Corrección de errores mayores
+2 días 
+
+Ajustes de dificultad
+1 dia
+
+15 dias
+
+Optimización de rendimiento
+4 días
+
+Revisión de compatibilidad en diferentes resoluciones
+3 días
+
+Creación de sistema de guardado y carga
+3 días
+
+Mejora de interfaz de usuario
+2 días
+
+Integración de tutorial o instrucciones
+2 días
+
+Documentación técnica básica
+1 día
+
+Publicación y store
+Preparar y lanzar públicamente el juego en plataformas digitales.
+
+4 semanas
+20 dias
+
+M5 – Beta + Store assets
+Objetivo: Preparar publicación y presentación pública 
+8 dias
+
+Capturas de pantalla
+1 día 
+
+Trailer del juego
+2 días 
+
+Crear página en Steam o itch.io
+2 días 
+
+Subida de builds + testing
+1 día 
+
+Corrección de bugs menores
+2 días 
+
+12 días
+
+Redacción de textos para la página de store
+2 días
+
+Traducción del juego a otros idiomas (opcional)
+3 días
+
+Revisión legal y derechos de autor (assets, música, etc.)
+2 días
+
+Preparación de notas de parche / changelog
+1 día
+
+Gestión de redes sociales y campaña previa al lanzamiento
+2 días
+
+Pruebas finales con jugadores externos
+2 días
+
+Mantenimiento / QA
+Dar soporte postlanzamiento, aplicar parches y mantener la calidad del producto.
+6 semanas
+30 días
+
+M6 – Release + Soporte
+Publicación y correcciones postlanzamiento
+El juego se lanza y se atienden los primeros reportes de usuarios
+6 días
+
+Publicación oficial
+1 día 
+
+Recepción de feedback de jugadores
+1 día 
+
+Hotfix o parche inicial
+2 días
+
+Organización del proyecto final y cierre
+2 días
+
+24 días
+
+Desarrollo de un pequeño parche de balance
+3 días
+
+Preparación de una actualización con contenido extra (mini update)
+5 días
+
+Gestión de comunidad y respuestas a usuarios
+3 días
+
+Análisis de métricas y desempeño
+3 días
+
+Soporte técnico (bugs de compatibilidad, etc.)
+5 días
+
+Planeamiento postmortem y lecciones aprendidas
+2 días
+
+Backup, archivo y documentación de cierre
+3 días
+
+
+
+
+
+
+
+
+
+
+
+
+Bueno, ahora le comentare sobre cómo gestionamos el proyecto y documentamos todo el proceso de trabajo.
+
+El equipo sigue la metodología ágil Scrum, lo que nos permitió organizar el desarrollo en ciclos de 15 días y enfocarnos en entregas constantes de valor.
+
+Cada integrante trabajó en su propia rama dentro de GitHub.
+
+Una vez que una funcionalidad estaba lista, se hacía un pull request a la rama develop
+
+Después de revisar y probar los cambios, se integraban vía merge a la rama 'main' como parte del incremento del Producto Mínimo Viable
+
+Para mantener todo claro y organizado, utilizamos las issues para registrar las historias de usuario y sus tareas correspondientes.
+
+Cada ‘user story’ cuenta con su serie de criterios de aceptación que nos ayudan a validar que lo que estamos desarrollando cumple con las expectativas,
+
+asi como su declaración de 'hecho' o 'done', para asegurarnos de que no falte ningún detalle al momento de completarlas.
+
+Las tareas se agruparon en milestones que representaban uno por cada sprint, con sus objetivos claros y medibles,
+
+y fueron pasando por cada estado de nuestro tablero Kanban (Product Backlog, To Do, In Progress, Testing) hasta el punto de terminar todas resueltas y archivadas al día de la fecha.
+
+Además, todas las ceremonias Scrum que tuvimos (como los Daily Meetings, los Planning y las Retrospectivas) quedaron registradas en la Wiki del proyecto.
+
+En cada minuta de los mismos dejamos constancia de tres puntos clave a saber:
+
+qué hizo cada integrante, qué va a hacer, y los impedimentos que se detectaron.
+
+Esto nos ayudó a detectar problemas temprano y a tener seguimiento del rendimiento individual y general del grupo.
+
+Por su parte, mantuvimos actualizado el documento IEEE830 como base técnica de referencia.
+
+A medida que el proyecto evolucionó, lo fuimos ajustando para reflejar los cambios más relevantes del sistema y asegurar que la documentación siempre acompañe al desarrollo.
+
+Por último, decidimos incorporar la sección '¿Quiénes Somos?' donde reflejamos nuestra visión y propósito como desarrolladores, en línea con los objetivos de los ABPs de emprendedurismo.
+
+Ahora le daré la palabra a mi compañero Nahir
