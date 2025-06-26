@@ -2,7 +2,6 @@
 .idea/
 .plastic/
 .vs/
-app/
 Builds/
 ignore.conf
 Logs/
