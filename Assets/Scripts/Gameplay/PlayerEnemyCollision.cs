@@ -80,7 +80,7 @@ namespace Platformer.Gameplay
 					if (!enemyHealth.IsAlive)
 					{
 						Debug.Log("Enemigo salta por 2");
-						player.Bounce(2);
+						//player.Bounce(2);
 						Debug.Log("antes que Enemigo muere");
 						Schedule<EnemyDeath>().enemy = enemy;
 					}
@@ -88,7 +88,7 @@ namespace Platformer.Gameplay
 					{
 						Debug.Log("Si Enemigo NO muere, ");
 						Debug.Log("Prota salta normal");
-						player.Bounce(7);
+						//player.Bounce(7);
 					}
 				}
 				else
@@ -96,7 +96,7 @@ namespace Platformer.Gameplay
 					Debug.Log("Si Enemigo muere, ");
 					Schedule<EnemyDeath>().enemy = enemy;
 					Debug.Log("Prota salta por 2");
-					player.Bounce(2);
+					//player.Bounce(2);
 				}
 			}
 			else
