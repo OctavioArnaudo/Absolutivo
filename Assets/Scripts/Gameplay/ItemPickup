@@ -1,8 +1,0 @@
-[Header( Item to Pick Up
-Tooltip Arrastra y suelta el ScriptableObject de Item aqui
-public Item itmToGive
-
-Header Pickup Settings
-Tooltip El tag del GameObject del jugador (ej. 'Player)
-public string playerTag = Player
-
