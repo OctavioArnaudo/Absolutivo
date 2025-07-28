@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\octav\\unreal projects\\app\\source\\app\\appgamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\appeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\app\\definitions.app.h",
+            "c:\\users\\octav\\unreal projects\\app\\source\\app\\appgamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\unrealeditor\\inc\\app\\uht\\appgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

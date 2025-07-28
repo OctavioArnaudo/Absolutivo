@@ -1,0 +1,34 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-App.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/AppEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/Module.App.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/App.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/AppCameraManager.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/AppCharacter.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/AppGameMode.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/AppPlayerController.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/HorrorCharacter.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/HorrorGameMode.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/HorrorPlayerController.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/HorrorUI.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterBulletCounterUI.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterCharacter.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterGameMode.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterPickup.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterPlayerController.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterProjectile.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterUI.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterWeapon.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterWeaponHolder.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/EnvQueryContext_Target.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterAIController.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterNPC.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/ShooterStateTreeUtility.cpp.obj"
+"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/Default.rc2.res"
+/OUT:"C:/Users/octav/Unreal Projects/App/Intermediate/Build/Win64/x64/UnrealEditor/Development/App/UnrealEditor-App.lib"

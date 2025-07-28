@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\App.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\App.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\AppEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\App">
+      <UniqueIdentifier>{B9938D30-7B87-3AD4-B7D2-2B344D42C13B}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\App\App.Build.cs">
+      <Filter>Source\App</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\App\App.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\App.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\AppCameraManager.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\AppCameraManager.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\AppCharacter.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\AppCharacter.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\AppGameMode.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\AppGameMode.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\AppPlayerController.cpp">
+      <Filter>Source\App</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\AppPlayerController.h">
+      <Filter>Source\App</Filter>
+    </ClInclude>
+    <Filter Include="Source\App\Variant_Horror">
+      <UniqueIdentifier>{BEB24BF4-6E66-3C70-AB4F-BFEAC49F43C0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\App\Variant_Horror\HorrorCharacter.cpp">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Horror\HorrorCharacter.h">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Horror\HorrorGameMode.cpp">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Horror\HorrorGameMode.h">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Horror\HorrorPlayerController.cpp">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Horror\HorrorPlayerController.h">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Horror\HorrorUI.cpp">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Horror\HorrorUI.h">
+      <Filter>Source\App\Variant_Horror</Filter>
+    </ClInclude>
+    <Filter Include="Source\App\Variant_Shooter">
+      <UniqueIdentifier>{9292C7E4-6AB8-340A-A95B-7234EC4FAB96}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterBulletCounterUI.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterBulletCounterUI.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterCharacter.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterCharacter.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterGameMode.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterGameMode.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterPickup.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterPickup.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterPlayerController.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterPlayerController.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterProjectile.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterProjectile.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterUI.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterUI.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterWeapon.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterWeapon.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\ShooterWeaponHolder.cpp">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\ShooterWeaponHolder.h">
+      <Filter>Source\App\Variant_Shooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\App\Variant_Shooter\AI">
+      <UniqueIdentifier>{B59006A8-269C-3E11-9154-595851F17ACF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\AI\EnvQueryContext_Target.cpp">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\AI\EnvQueryContext_Target.h">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\AI\ShooterAIController.cpp">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\AI\ShooterAIController.h">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\AI\ShooterNPC.cpp">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\AI\ShooterNPC.h">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\App\Variant_Shooter\AI\ShooterStateTreeUtility.cpp">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\App\Variant_Shooter\AI\ShooterStateTreeUtility.h">
+      <Filter>Source\App\Variant_Shooter\AI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
