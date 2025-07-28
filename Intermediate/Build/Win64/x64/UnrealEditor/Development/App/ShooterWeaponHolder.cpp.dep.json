@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterweaponholder.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\appeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\app\\definitions.app.h",
+            "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterweaponholder.h",
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\unrealeditor\\inc\\app\\uht\\shooterweaponholder.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

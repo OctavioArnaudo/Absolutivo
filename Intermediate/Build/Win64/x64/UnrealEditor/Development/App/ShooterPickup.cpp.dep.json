@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterpickup.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\appeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\app\\definitions.app.h",
+            "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterpickup.h",
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\unrealeditor\\inc\\app\\uht\\shooterpickup.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\spherecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\spherecomponent.generated.h",
+            "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterweaponholder.h",
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\unrealeditor\\inc\\app\\uht\\shooterweaponholder.generated.h",
+            "c:\\users\\octav\\unreal projects\\app\\source\\app\\variant_shooter\\shooterweapon.h",
+            "c:\\users\\octav\\unreal projects\\app\\intermediate\\build\\win64\\unrealeditor\\inc\\app\\uht\\shooterweapon.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
