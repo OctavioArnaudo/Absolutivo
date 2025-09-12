@@ -1,1 +1,0 @@
-C:/Users/octav/Saved Games/eloquent-sutherland/.vs
