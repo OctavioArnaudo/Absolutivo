@@ -25,7 +25,6 @@
 ###> phpunit/phpunit ###
 ###< phpunit/phpunit ###
 
-*.csproj
 *.dll
 *.local
 *.lock
