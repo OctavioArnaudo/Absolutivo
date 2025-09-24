@@ -61,13 +61,34 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.2.2f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NavMeshComponents\Scripts\CollectTilemapSourcesCache2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshBuilder2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume1.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\AgentOverride2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink1.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\AgentRotate2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\RotateAgentInstantly.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\RotateAgentSmoothly.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\RootSources2d.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier1.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshBuilderState.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\CollectSources2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface1.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\CollectSourcesCache2d.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\NavMeshComponents\Scripts\NavMeshComponents.asmdef" />
+    <None Include="Assets\NavMeshComponents\Scripts\NavMeshComponents 1.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

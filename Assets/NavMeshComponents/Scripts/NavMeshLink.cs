@@ -1,14 +1,17 @@
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+using NavMeshPlus.Extensions;
 
-namespace UnityEngine.AI
+namespace NavMeshPlus.Components
 {
     [ExecuteInEditMode]
     [DefaultExecutionOrder(-101)]
-    [AddComponentMenu("Navigation/NavMeshLink", 33)]
-    [HelpURL("https://github.com/Unity-Technologies/NavMeshComponents#documentation-draft")]
+    [AddComponentMenu("Navigation/Navigation Link", 33)]
+    [HelpURL("https://github.com/Unity-Technologies/NavMeshPlus#documentation-draft")]
     public class NavMeshLink : MonoBehaviour
     {
-        [SerializeField]
+        [SerializeField, NavMeshAgent]
         int m_AgentTypeID;
         public int agentTypeID { get { return m_AgentTypeID; } set { m_AgentTypeID = value; UpdateLink(); } }
 
@@ -36,7 +39,7 @@ namespace UnityEngine.AI
         bool m_AutoUpdatePosition;
         public bool autoUpdate { get { return m_AutoUpdatePosition; } set { SetAutoUpdate(value); } }
 
-        [SerializeField]
+        [SerializeField, NavMeshArea]
         int m_Area;
         public int area { get { return m_Area; } set { m_Area = value; UpdateLink(); } }
 
@@ -50,19 +53,19 @@ namespace UnityEngine.AI
         void OnEnable()
         {
             AddLink();
-            if (m_AutoUpdatePosition && NavMesh.IsLinkValid(m_LinkInstance))
+            if (m_AutoUpdatePosition && m_LinkInstance.valid)
                 AddTracking(this);
         }
 
         void OnDisable()
         {
             RemoveTracking(this);
-            NavMesh.RemoveLink(m_LinkInstance);
+            m_LinkInstance.Remove();
         }
 
         public void UpdateLink()
         {
-            NavMesh.RemoveLink(m_LinkInstance);
+            m_LinkInstance.Remove();
             AddLink();
         }
 
@@ -104,7 +107,7 @@ namespace UnityEngine.AI
         void AddLink()
         {
 #if UNITY_EDITOR
-            if (NavMesh.IsLinkValid(m_LinkInstance))
+            if (m_LinkInstance.valid)
             {
                 Debug.LogError("Link is already added: " + this);
                 return;
@@ -120,8 +123,8 @@ namespace UnityEngine.AI
             link.area = m_Area;
             link.agentTypeID = m_AgentTypeID;
             m_LinkInstance = NavMesh.AddLink(link, transform.position, transform.rotation);
-            if (NavMesh.IsLinkValid(m_LinkInstance))
-                NavMesh.SetLinkOwner(m_LinkInstance, this);
+            if (m_LinkInstance.valid)
+                m_LinkInstance.owner = this;
 
             m_LastPosition = transform.position;
             m_LastRotation = transform.rotation;
@@ -153,7 +156,7 @@ namespace UnityEngine.AI
         {
             m_Width = Mathf.Max(0.0f, m_Width);
 
-            if (!NavMesh.IsLinkValid(m_LinkInstance))
+            if (!m_LinkInstance.valid)
                 return;
 
             UpdateLink();
