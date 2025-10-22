@@ -1,10 +1,10 @@
+using System.Collections;
+
 public class SpriteFacing : SpriteScaling
 {
-    protected override void Awake()
+    protected new IEnumerator FlipX(bool xFlipValue)
     {
-        base.Awake();
-        flipX = (bool xFlipValue) => {
-            sr.flipX = xFlipValue;
-        };
+        sr.flipX = xFlipValue;
+        yield return null;
     }
 }

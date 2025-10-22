@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class JumpLayer : JumpKinematic
+public class JumpLayer : AnimationSfx
 {
     protected override void Start()
     {

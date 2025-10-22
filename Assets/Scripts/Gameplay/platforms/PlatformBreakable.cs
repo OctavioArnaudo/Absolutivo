@@ -44,7 +44,7 @@ public class PlatformBreakable : TransformPointings
         isBroken = true;
         SetAnimatorParameter(() => isBroken, isBroken, platAnim);
 
-        PlayOnce(Clip, Source, platform);
+        PlayOnce(breakPlatformClip, Source, platform);
 
         if (breakEffectPrefab != null)
         {

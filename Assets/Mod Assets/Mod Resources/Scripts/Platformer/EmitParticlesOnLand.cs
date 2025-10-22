@@ -15,10 +15,6 @@ public class EmitParticlesOnLand : MonoBehaviour
         p = GetComponent<ParticleSystem>();
 
         if (emitOnEnemyDeath) {
-            EnemyDeath.OnExecute += EnemyDeath_OnExecute;
-            void EnemyDeath_OnExecute(EnemyDeath obj) {
-                p.Play();
-            }
         }
 
     }

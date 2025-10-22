@@ -15,7 +15,7 @@ public class MoveVertical : MonoController
         }
         if (displacementInput.x != 0 || displacementInput.y != 0)
         {
-            rb.MovePosition(rb.position + displacementInput * maxMoveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + displacementInput * moveSpeed * Time.fixedDeltaTime);
         }
     }
 }

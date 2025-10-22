@@ -16,6 +16,8 @@ public static partial class Simulation
         /// The instance field holds a single instance of the model type T.
         /// 
         /// </summary>
+#pragma warning disable UDR0001 // Domain Reload Analyzer
         public static T instance = new T();
+#pragma warning restore UDR0001 // Domain Reload Analyzer
     }
 }

@@ -7,7 +7,7 @@ public class JumpTakeoff : JumpHit
         base.Update();
         if (isGrounded && jumpPressed)
         {
-            rb.AddForceY(maxJumpSpeed, ForceMode2D.Impulse);
+            rb.AddForceY(jumpSpeed, ForceMode2D.Impulse);
         }
     }
 }

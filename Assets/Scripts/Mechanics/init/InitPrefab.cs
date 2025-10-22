@@ -1,5 +1,7 @@
 using UnityEngine;
+using System;
 
+[Serializable]
 public class InitPrefab : InitParticle
 {
     [SerializeField] public GameObject ammoPickupPrefab;
@@ -30,4 +32,38 @@ public class InitPrefab : InitParticle
     [SerializeField] public GameObject wallPrefab;
     [SerializeField] public GameObject weaponPickupPrefab;
     [SerializeField] public GameObject weaponPrefab;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        ammoPickupPrefab ??= gameObject;
+        barrelPrefab ??= gameObject;
+        boulderPrefab ??= gameObject;
+        breakableWallPrefab ??= gameObject;
+        breakEffectPrefab ??= gameObject;
+        buttonPrefab ??= gameObject;
+        checkpointPrefab ??= gameObject;
+        cratePrefab ??= gameObject;
+        doorPrefab ??= gameObject;
+        elevatorPrefab ??= gameObject;
+        flameTrapPrefab ??= gameObject;
+        healthPickupPrefab ??= gameObject;
+        leverPrefab ??= gameObject;
+        meleeEnemyPrefab ??= gameObject;
+        movingPlatformPrefab ??= gameObject;
+        oneWayPlatformPrefab ??= gameObject;
+        platformPathPrefab ??= gameObject;
+        playerPrefab ??= gameObject;
+        projectilePrefab ??= gameObject;
+        rangedEnemyPrefab ??= gameObject;
+        sawTrapPrefab ??= gameObject;
+        spawnPointPrefab ??= gameObject;
+        spikeTrapPrefab ??= gameObject;
+        trapPrefab ??= gameObject;
+        victoryPrefab ??= gameObject;
+        wallPrefab ??= gameObject;
+        weaponPickupPrefab ??= gameObject;
+        weaponPrefab ??= gameObject;
+        AssignDefaults(this, gameObject);
+    }
 }

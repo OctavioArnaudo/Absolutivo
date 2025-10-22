@@ -7,8 +7,8 @@ public class MoveUnstop : MoveVertical
         base.FixedUpdate();
         if (displacementInput.x != 0 || displacementInput.y != 0)
         {
-            rb.linearVelocity = displacementInput * maxMoveSpeed;
-            rb.AddForce(displacementInput * maxMoveSpeed);
+            rb.linearVelocity = displacementInput * moveSpeed;
+            rb.AddForce(displacementInput * moveSpeed);
         }
     }
 }

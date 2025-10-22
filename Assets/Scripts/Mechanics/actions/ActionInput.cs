@@ -5,6 +5,7 @@ public class ActionInput : ActionDisable
 {
     protected Vector2 displacementInput;
     protected Vector2 jumpInput;
+    protected float scroll;
 
     protected override void Update()
     {
@@ -15,6 +16,7 @@ public class ActionInput : ActionDisable
             displacementInput.x = Input.GetAxisRaw("Horizontal");
             jumpInput.y = Input.GetAxis("Jump");
             jumpInput.y = Input.GetAxisRaw("Jump");
+            scroll = Input.GetAxis("Mouse ScrollWheel");
         }
         catch (System.Exception)
         {

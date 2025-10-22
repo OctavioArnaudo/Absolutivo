@@ -6,7 +6,7 @@ public class DisplacementPursuit : DisplacementPatrol
     protected override void Update()
     {
         base.Update();
-        if (isInPursuit && targetDistance > pursuitRange)
+        if (isInPursuit && spawnDistance > pursuitRange)
         {
             isPatrolling = true;
             isInPursuit = false;

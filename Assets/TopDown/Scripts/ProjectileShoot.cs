@@ -2,24 +2,20 @@ using UnityEngine;
 
 public class ProjectileShoot : MeleeAttack
 {
-    public float projectileSpeed = 10f;
-
-    public void ShootProjectile(GameObject projectile = null, Vector3? origin = null, Transform target = null, float? maxSpeed = null)
+    protected override void Start()
     {
-        GameObject finalProjectile = projectile ?? projectilePrefab;
-        Vector3 finalOrigin = origin ?? transform.position;
-        Transform finalTarget = target ?? targetPoint;
-        float finalSpeed = maxSpeed ?? projectileSpeed;
+        base.Start();
+        OnObjectSpawned += ShootProjectile;
+    }
+    public void ShootProjectile(GameObject instance)
+    {
+        Vector3 direction = (instance.transform.position - transform.position).normalized;
+        float speed = Random.Range(1f, spawnSpeed);
 
-        GameObject projectileInstance = Object.Instantiate(finalProjectile, finalOrigin, Quaternion.identity);
-
-        Vector3 direction = (finalTarget.position - finalOrigin).normalized;
-        float speed = Random.Range(1f, finalSpeed);
-
-        Rigidbody rb = projectileInstance.GetComponent<Rigidbody>();
+        Rigidbody rb = instance.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.transform.position = new Vector3(finalOrigin.x + 1f * Time.deltaTime, finalOrigin.y, finalOrigin.z);
+            rb.transform.position = new Vector3(instance.transform.position.x + 1f * Time.deltaTime, instance.transform.position.y, instance.transform.position.z);
             rb.linearVelocity = direction * speed;
         }
     }

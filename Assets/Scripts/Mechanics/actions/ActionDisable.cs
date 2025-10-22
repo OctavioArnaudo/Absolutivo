@@ -5,5 +5,6 @@ public class ActionDisable : ActionEnable
         base.OnDisable();
         displacementAction.Disable();
         jumpAction.Disable();
+        menuAction.Disable();
     }
 }

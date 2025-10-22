@@ -9,7 +9,7 @@ public class JumpHit : JumpGrounded
         {
             isJumping = true;
             SetAnimatorParameter(() => isJumping, isJumping, animatorComponent);
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxJumpSpeed);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpSpeed);
         }
     }
 }

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DisplacementPatrol : MonoController
 {
+
     public Transform[] patrolPoints;
     private int currentPoint = 0;
     public float patrolSpeed = 3.5f;

@@ -1,8 +1,10 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InitParticle : InitPanel
+[Serializable]
+public class InitParticle : InitCanvas
 {
     [Header("Particle Systems")]
     [SerializeField] public ParticleSystem attackEffect;
@@ -29,31 +31,40 @@ public class InitParticle : InitPanel
         return particle;
     }
 
-    public virtual void TriggerIdleEffect()
+    public virtual IEnumerator TriggerIdleEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerWalkEffect()
+    public virtual IEnumerator TriggerWalkEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerAttackEffect()
+    public virtual IEnumerator TriggerAttackEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerDashEffect()
+    public virtual IEnumerator TriggerDashEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerDeathEffect()
+    public virtual IEnumerator TriggerDeathEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerJumpEffect()
+    public virtual IEnumerator TriggerJumpEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerLandEffect()
+    public virtual IEnumerator TriggerLandEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerRespawnEffect()
+    public virtual IEnumerator TriggerRespawnEffect()
     {
+        yield return null;
     }
-    public virtual void TriggerVictoryEffect()
+    public virtual IEnumerator TriggerVictoryEffect()
     {
+        yield return null;
     }
 }

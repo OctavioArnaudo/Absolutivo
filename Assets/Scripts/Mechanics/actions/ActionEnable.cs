@@ -5,5 +5,6 @@ public class ActionEnable : ActionMapping
         base.OnEnable();
         displacementAction.Enable();
         jumpAction.Enable();
+        menuAction.Enable();
     }
 }

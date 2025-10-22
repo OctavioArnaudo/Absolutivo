@@ -1,7 +1,9 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class InitAudio : InitAnimator
 {
     [Header("Audio Clips")]
@@ -33,8 +35,9 @@ public class InitAudio : InitAnimator
 
     [SerializeField] protected List<(string, AudioModel)> playerAudioList = new List<(string key, AudioModel value)>();
 
-    public virtual void TriggerAudioState(string stateName)
+    public virtual IEnumerator TriggerAudioState(string stateName)
     {
+        yield return null;
     }
 
     public AudioClip PlayLoop(AudioClip clip)
@@ -44,7 +47,6 @@ public class InitAudio : InitAnimator
     public AudioClip PlayLoop(AudioClip clip, AudioSource source, GameObject obj)
     {
         AudioSource finalSource = source ?? Source;
-        AudioClip finalClip = clip ?? Clip;
         GameObject finalObj = obj ?? gameObject;
 
         if (finalSource == null && obj != null)
@@ -52,12 +54,12 @@ public class InitAudio : InitAnimator
             finalSource = finalObj.GetComponent<AudioSource>();
         }
 
-        if (finalClip == null && finalSource != null)
+        if (clip == null && finalSource != null)
         {
-            finalClip = finalSource.clip;
+            clip = finalSource.clip;
         }
 
-        if (finalClip == null)
+        if (clip == null)
         {
             Debug.LogWarning("AudioClip is null. Please provide a valid AudioClip.");
             return null;
@@ -65,16 +67,16 @@ public class InitAudio : InitAnimator
 
         if (finalSource != null)
         {
-            finalSource.clip = finalClip;
+            finalSource.clip = clip;
             finalSource.loop = true;
             finalSource.Play();
         }
         else
         {
-            Debug.LogWarning($"AudioSource is not set for clip '{finalClip.name}'.");
+            Debug.LogWarning($"AudioSource is not set for clip '{clip.name}'.");
         }
 
-        return finalClip;
+        return clip;
     }
 
     public AudioClip PlayOnce(AudioClip clip)
@@ -84,7 +86,6 @@ public class InitAudio : InitAnimator
     public AudioClip PlayOnce(AudioClip clip, AudioSource source, GameObject obj)
     {
         AudioSource finalSource = source ?? Source;
-        AudioClip finalClip = clip ?? Clip;
         GameObject finalObj = obj ?? gameObject;
 
         if (finalSource == null && obj != null)
@@ -92,12 +93,12 @@ public class InitAudio : InitAnimator
             finalSource = finalObj.GetComponent<AudioSource>();
         }
 
-        if (finalClip == null && finalSource != null)
+        if (clip == null && finalSource != null)
         {
-            finalClip = finalSource.clip;
+            clip = finalSource.clip;
         }
 
-        if (finalClip == null)
+        if (clip == null)
         {
             Debug.LogWarning("AudioClip is null. Please provide a valid AudioClip.");
             return null;
@@ -106,14 +107,14 @@ public class InitAudio : InitAnimator
         if (finalSource != null)
         {
             finalSource.loop = false;
-            finalSource.PlayOneShot(finalClip);
+            finalSource.PlayOneShot(clip);
         }
         else
         {
-            Debug.LogWarning($"AudioSource or AudioClip '{finalClip?.name}' is not set.");
+            Debug.LogWarning($"AudioSource or AudioClip '{clip?.name}' is not set.");
         }
 
-        return finalClip;
+        return clip;
     }
 
 }

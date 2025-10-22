@@ -8,8 +8,9 @@ public class TransformPointings : JumpFall
     [SerializeField]
     public List<string> selectedTags = new List<string>();
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         transformsByTag.Clear();
 
         foreach (string tag in selectedTags)

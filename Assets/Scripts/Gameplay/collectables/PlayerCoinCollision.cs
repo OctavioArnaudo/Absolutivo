@@ -1,4 +1,3 @@
-using Platformer.Gameplay;
 using UnityEngine;
 
 public class PlayerCoinCollision : MonoBehaviour

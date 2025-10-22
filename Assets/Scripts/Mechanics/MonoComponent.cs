@@ -1,28 +1,163 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using UnityEngine;
-using UnityEngine.Events;
 
-public class MonoComponent : MonoBehaviour
+/// <summary>
+/// 
+/// GameController is a MonoBehaviour that manages the game simulation and provides access to the game model.
+/// 
+/// </summary>
+public abstract class MonoComponent : MonoBehaviour
 {
-    private static MonoBehaviour _instance;
 
-    public static MonoBehaviour Instance
+    /// <summary>
+    /// 
+    /// The model that contains the game state and mechanics.
+    /// 
+    /// </summary>
+    //This model field is public and can be therefore be modified in the 
+    //inspector.
+    //The reference actually comes from the InstanceRegister, and is shared
+    //through the simulation and events. Unity will deserialize over this
+    //shared reference when the scene loads, allowing the model to be
+    //conveniently configured inside the inspector.
+    private static MonoComponent instance;
+
+    /// <summary>
+    /// 
+    /// The singleton instance of the GameController.
+    /// 
+    /// </summary>
+    public static MonoComponent GetInstance()
     {
-        get
+        if (instance == null)
         {
-            if (_instance == null)
+            SetInstance(FindFirstObjectByType<MonoComponent>());
+            if (instance == null)
             {
-                _instance = FindFirstObjectByType<MonoBehaviour>();
-                if (_instance == null)
+                GameObject singletonObject = new GameObject(typeof(MonoBehaviour).Name + " (Singleton)");
+                SetInstance(singletonObject.AddComponent<MonoComponent>());
+                DontDestroyOnLoad(singletonObject);
+            }
+        }
+        return instance;
+    }
+
+    private static void SetInstance(MonoComponent value)
+    {
+        instance = value;
+    }
+
+    /// <summary>
+    /// 
+    /// Prints the name and value of a variable using an expression.
+    /// 
+    /// <typeparam name="T">The type of the variable.</typeparam>
+    /// 
+    /// <param name="expression">An expression representing the variable.</param>
+    /// 
+    /// <example>
+    /// 
+    /// <code>
+    /// 
+    /// int myVariable = 42;
+    /// DebuggerUtility.PrintVariable(() => myVariable);
+    ///
+    /// </code>
+    /// 
+    /// </example>
+    /// 
+    /// </summary>
+    public void PrintVariable<T>(Expression<Func<T>> expression)
+    {
+        // Get the variable name from the expression
+        string variableName = ((MemberExpression)expression.Body).Member.Name;
+
+        // Compile the expression to get the value
+        T value = expression.Compile().Invoke();
+
+        // Print the variable name and value
+        Console.WriteLine($"{variableName}: {value}");
+
+        Debug.Log($"{variableName}: {value}");
+    }
+
+    public void AssignDefaults(object instance, GameObject fallback)
+    {
+        Type type = instance.GetType();
+        BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly;
+
+        FieldInfo[] fields = type.GetFields(flags);
+
+        foreach (FieldInfo field in fields)
+        {
+            if (field.FieldType == typeof(GameObject))
+            {
+                GameObject value = field.GetValue(instance) as GameObject;
+                if (value == null)
                 {
-                    GameObject singletonObject = new GameObject(typeof(MonoBehaviour).Name + " (Singleton)");
-                    _instance = singletonObject.AddComponent<MonoBehaviour>();
-                    DontDestroyOnLoad(singletonObject);
+                    field.SetValue(instance, fallback);
                 }
             }
-            return _instance;
+        }
+    }
+    public void AssignDefaults(object instance, GameObject fallback, List<string> excludedFieldNames = null)
+    {
+        Type type = instance.GetType();
+        BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly;
+
+        FieldInfo[] fields = type.GetFields(flags);
+
+        foreach (FieldInfo field in fields)
+        {
+            if (field.FieldType == typeof(GameObject))
+            {
+                if (excludedFieldNames != null && excludedFieldNames.Contains(field.Name))
+                    continue;
+
+                GameObject value = field.GetValue(instance) as GameObject;
+                if (value == null)
+                {
+                    field.SetValue(instance, fallback);
+                }
+            }
+        }
+    }
+    
+    protected Dictionary<string, object> modelData = new Dictionary<string, object>();
+
+    public void CopyFrom(object source)
+    {
+        var sourceType = source.GetType();
+        var targetType = this.GetType();
+
+        foreach (var sourceProp in sourceType.GetProperties())
+        {
+            var targetProp = targetType.GetProperty(sourceProp.Name);
+            if (targetProp != null && targetProp.CanWrite && targetProp.PropertyType == sourceProp.PropertyType)
+            {
+                targetProp.SetValue(this, sourceProp.GetValue(source));
+            }
+        }
+
+        foreach (var sourceField in sourceType.GetFields())
+        {
+            var targetField = targetType.GetField(sourceField.Name);
+            if (targetField != null && targetField.FieldType == sourceField.FieldType)
+            {
+                targetField.SetValue(this, sourceField.GetValue(source));
+            }
+        }
+    }
+
+    public void LoadFrom(object source)
+    {
+        var sourceType = source.GetType();
+        foreach (var sourceProp in sourceType.GetProperties())
+        {
+            modelData[sourceProp.Name] = sourceProp.GetValue(source);
         }
     }
 
@@ -39,198 +174,20 @@ public class MonoComponent : MonoBehaviour
     }
     protected virtual void Awake()
     {
-        if (_instance == null)
+        if (GetInstance() == null)
         {
-            _instance = this;
+            SetInstance(this);
             DontDestroyOnLoad(gameObject);
         }
-        else if (_instance != this)
+        else if (GetInstance() != this)
         {
             Destroy(gameObject);
         }
         OnAwake();
     }
 
-    /// <summary>
-    /// Se llama una vez cuando el GameObject está activado. Es útil para lógica que necesita ejecutarse
-    /// cada vez que el GameObject se activa, no solo al inicio.
-    /// </summary>
-    public virtual void Enable()
-    {
-    }
-    protected virtual void OnEnable()
-    {
-        Enable();
-    }
-
-    // -----------------------------------------------------------
-    // Métodos de Actualización
-    // -----------------------------------------------------------
-
-    public static List<Func<GameObject, GameObject>> OnGlobalObjectDetecting = new();
-    protected List<Func<GameObject, GameObject>> OnObjectDetecting = new();
-    public static List<Func<GameObject, GameObject>> OnGlobalDetecting = new();
-    protected List<Func<GameObject, GameObject>> OnDetecting = new();
-
-    public static event Func<GameObject, GameObject> OnGlobalObjectDetected;
-    protected event Func<GameObject, GameObject> OnObjectDetected;    
-    public static Func<GameObject, GameObject> OnGlobalDetected => null;
-    protected virtual Func<GameObject, GameObject> OnDetected => null;
-
-    public static UnityEvent<GameObject> OnGlobalObjectInspected = new();
-    protected UnityEvent<GameObject> OnObjectInspected = new();
-    public static event Action<GameObject> OnGlobalObjectProcessed;
-    protected event Action<GameObject> OnObjectProcessed;
-    public static UnityEvent<GameObject> OnGlobalInspected => null;
-    protected virtual UnityEvent<GameObject> OnInspected => null;
-    public static Action<GameObject> OnGlobalProcessed => null;
-    protected virtual Action<GameObject> OnProcessed => null;
-
-    public void Add<T>(ref List<Func<T, T>> e, List<Func<T, T>> m)
-    {
-        e.AddRange(m);
-    }
-    public void Add<T>(ref List<Func<T, T>> e, Func<T, T> m)
-    {
-        e.Add(m);
-    }
-    public void Add<T>(ref Func<T, T> e, Func<T, T> m)
-    {
-        e += m;
-    }
-    public void Add<T>(ref Action<T> e, Action<T> m)
-    {
-        e += m;
-    }
-    public void Add<T>(ref UnityEvent<T> e, UnityAction<T> m)
-    {
-        e.AddListener(m);
-    }
-
-    public void Remove<T>(ref List<Func<T, T>> e, List<Func<T, T>> m)
-    {
-        e.Remove(m.Last());
-    }
-    public void Remove<T>(ref List<Func<T, T>> e, Func<T, T> m)
-    {
-        e.Remove(m);
-    }
-    public void Remove<T>(ref Func<T, T> e, Func<T, T> m)
-    {
-        e -= m;
-    }
-    public void Remove<T>(ref Action<T> e, Action<T> m)
-    {
-        e -= m;
-    }
-    public void Remove<T>(ref UnityEvent<T> e, UnityAction<T> m)
-    {
-        e.RemoveListener(m);
-    }
-
-    public void Clear()
-    {
-        OnGlobalObjectDetecting.Clear();
-        OnGlobalDetecting.Clear();
-        OnGlobalObjectDetected = null;
-        OnGlobalObjectProcessed = null;
-        OnGlobalObjectInspected.RemoveAllListeners();
-        OnGlobalInspected.RemoveAllListeners();
-    }
-    protected void RemoveAllListeners()
-    {
-        OnObjectDetecting.Clear();
-        OnDetecting.Clear();
-        OnObjectDetected = null;
-        OnObjectProcessed = null;
-        OnObjectInspected.RemoveAllListeners();
-        OnInspected.RemoveAllListeners();
-    }
-
-    public static bool GlobalAutoSubscribe => true;
-    protected virtual bool AutoSubscribe => true;
-
     public virtual void OnStart()
     {
-        if (OnGlobalDetecting != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectDetecting, OnGlobalDetecting);
-        }
-        if (OnDetecting != null && AutoSubscribe)
-        {
-            Add(ref OnObjectDetecting, OnDetecting);
-        }
-
-        if (GlobalAutoSubscribe && OnDetecting.Count > 0)
-        {
-            foreach (var func in OnDetecting)
-            {
-                if (!OnGlobalObjectDetecting.Contains(func))
-                    Add(ref OnGlobalObjectDetecting, func);
-            }
-        }
-        if (AutoSubscribe && OnGlobalDetecting.Count > 0)
-        {
-            foreach (var func in OnGlobalDetecting)
-            {
-                if (!OnObjectDetecting.Contains(func))
-                    Add(ref OnObjectDetecting, func);
-            }
-        }
-
-        if (OnGlobalDetected != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectDetected, OnGlobalDetected);
-        }
-        if (OnDetected != null && AutoSubscribe)
-        {
-            Add(ref OnObjectDetected, OnDetected);
-        }
-
-        if (OnGlobalDetected != null && AutoSubscribe)
-        {
-            Add(ref OnObjectDetected, OnGlobalDetected);
-        }
-        if (OnDetected != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectDetected, OnDetected);
-        }
-
-        if (OnGlobalProcessed != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectProcessed, OnGlobalProcessed);
-        }
-        if (OnProcessed != null && AutoSubscribe)
-        {
-            Add(ref OnObjectProcessed, OnProcessed);
-        }
-
-        if (OnGlobalProcessed != null && AutoSubscribe)
-        {
-            Add(ref OnObjectProcessed, OnGlobalProcessed);
-        }
-        if (OnProcessed != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectProcessed, OnProcessed);
-        }
-
-        if (OnGlobalInspected != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectInspected, obj => OnGlobalInspected.Invoke(obj));
-        }
-        if (OnInspected != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnObjectInspected, obj => OnInspected.Invoke(obj));
-        }
-
-        if (OnGlobalInspected != null && AutoSubscribe)
-        {
-            Add(ref OnObjectInspected, obj => OnGlobalInspected.Invoke(obj));
-        }
-        if (OnInspected != null && GlobalAutoSubscribe)
-        {
-            Add(ref OnGlobalObjectInspected, obj => OnInspected.Invoke(obj));
-        }
     }
     /// <summary>
     /// Se llama una vez después de Awake. Es ideal para inicializar referencias a otros componentes o GameObjects,
@@ -242,11 +199,41 @@ public class MonoComponent : MonoBehaviour
     }
 
     /// <summary>
+    /// Se llama una vez cuando el GameObject está activado. Es útil para lógica que necesita ejecutarse
+    /// cada vez que el GameObject se activa, no solo al inicio.
+    /// </summary>
+    /// <summary>
+    /// 
+    /// The simulation that manages the game events and mechanics.
+    /// 
+    /// </summary>
+    public virtual void Enable()
+    {
+        // Ensure that only one instance of GameController exists
+        SetInstance(this);
+    }
+    protected virtual void OnEnable()
+    {
+        Enable();
+    }
+
+    // -----------------------------------------------------------
+    // Métodos de Actualización
+    // -----------------------------------------------------------
+
+    /// <summary>
     /// Se llama en cada fotograma. Es el lugar principal para la lógica del juego, como movimiento de personajes,
     /// detección de entrada del usuario o actualizaciones de estado.
     /// </summary>
+    /// <summary>
+    /// 
+    /// Update is called once per frame. It ticks the simulation if this GameController is the current instance.
+    /// 
+    /// </summary>
     public virtual void OnUpdate()
     {
+        // If this GameController is the current instance, tick the simulation
+        if (GetInstance() == this) Simulation.Tick();
     }
     protected virtual void Update()
     {
@@ -279,54 +266,21 @@ public class MonoComponent : MonoBehaviour
     }
 
     // -----------------------------------------------------------
-    // Métodos de Detección de Colisiones
-    // -----------------------------------------------------------
-
-    /// <summary>
-    /// Se llama en el primer fotograma en que el Collider del GameObject entra en contacto con otro Collider.
-    /// </summary>
-    /// <param name="collision">Información de la colisión.</param>
-    public virtual void CollisionEnter(Collision collision)
-    {
-    }
-    protected virtual void OnCollisionEnter(Collision collision)
-    {
-        CollisionEnter(collision);
-    }
-
-    /// <summary>
-    /// Se llama en cada fotograma en que el Collider del GameObject está en contacto con otro Collider.
-    /// </summary>
-    /// <param name="collision">Información de la colisión.</param>
-    public virtual void CollisionStay(Collision collision)
-    {
-    }
-    protected virtual void OnCollisionStay(Collision collision)
-    {
-        CollisionStay(collision);
-    }
-
-    /// <summary>
-    /// Se llama en el último fotograma en que el Collider del GameObject estaba en contacto con otro Collider.
-    /// </summary>
-    /// <param name="collision">Información de la colisión.</param>
-    public virtual void CollisionExit(Collision collision)
-    {
-    }
-    protected virtual void OnCollisionExit(Collision collision)
-    {
-        CollisionExit(collision);
-    }
-
-    // -----------------------------------------------------------
     // Métodos de Destrucción y Desactivación
     // -----------------------------------------------------------
 
     /// <summary>
     /// Se llama cuando el GameObject se desactiva. Es el opuesto de OnEnable.
     /// </summary>
+    /// <summary>
+    /// 
+    /// Called when the GameController is disabled. It sets the Instance to null if it is the current instance.
+    /// 
+    /// </summary>
     public virtual void Disable()
     {
+        // Set Instance to null when this GameController is disabled
+        if (GetInstance() == this) SetInstance(null);
     }
     protected virtual void OnDisable()
     {
@@ -335,85 +289,6 @@ public class MonoComponent : MonoBehaviour
 
     public virtual void Destroy()
     {
-        if (OnGlobalDetecting != null)
-        {
-            Remove(ref OnGlobalObjectDetecting, OnGlobalDetecting);
-        }
-        if (OnDetecting != null)
-        {
-            Remove(ref OnObjectDetecting, OnDetecting);
-        }
-
-        if (GlobalAutoSubscribe && OnDetecting.Count > 0)
-        {
-            foreach (var func in OnDetecting)
-            {
-                if (!OnGlobalObjectDetecting.Contains(func))
-                    Remove(ref OnGlobalObjectDetecting, func);
-            }
-        }
-        if (AutoSubscribe && OnGlobalDetecting.Count > 0)
-        {
-            foreach (var func in OnGlobalDetecting)
-            {
-                if (!OnObjectDetecting.Contains(func))
-                    Remove(ref OnObjectDetecting, func);
-            }
-        }
-
-        if (OnGlobalDetected != null)
-        {
-            Remove(ref OnGlobalObjectDetected, OnGlobalDetected);
-        }
-        if (OnDetected != null)
-        {
-            Remove(ref OnObjectDetected, OnDetected);
-        }
-
-        if (OnGlobalDetected != null)
-        {
-            Remove(ref OnObjectDetected, OnGlobalDetected);
-        }
-        if (OnDetected != null)
-        {
-            Remove(ref OnGlobalObjectDetected, OnDetected);
-        }
-
-        if (OnGlobalProcessed != null)
-        {
-            Remove(ref OnGlobalObjectProcessed, OnGlobalProcessed);
-        }
-        if (OnProcessed != null)
-        {
-            Remove(ref OnObjectProcessed, OnProcessed);
-        }
-
-        if (OnGlobalProcessed != null)
-        {
-            Remove(ref OnObjectProcessed, OnGlobalProcessed);
-        }
-        if (OnProcessed != null)
-        {
-            Remove(ref OnGlobalObjectProcessed, OnProcessed);
-        }
-
-        if (OnGlobalInspected != null)
-        {
-            Remove(ref OnGlobalObjectInspected, obj => OnGlobalInspected.Invoke(obj));
-        }
-        if (OnInspected != null)
-        {
-            Remove(ref OnObjectInspected, obj => OnInspected.Invoke(obj));
-        }
-
-        if (OnGlobalInspected != null)
-        {
-            Remove(ref OnObjectInspected, obj => OnGlobalInspected.Invoke(obj));
-        }
-        if (OnInspected != null)
-        {
-            Remove(ref OnGlobalObjectInspected, obj => OnInspected.Invoke(obj));
-        }
     }
     /// <summary>
     /// Se llama cuando el script o GameObject se destruye. Es útil para limpiar recursos, como
@@ -424,83 +299,4 @@ public class MonoComponent : MonoBehaviour
         Destroy();
     }
 
-    public virtual void OnEnter2D(GameObject other)
-    {
-        GameObject obj;
-        foreach (var globalObjectDetecting in OnGlobalObjectDetecting)
-            obj = globalObjectDetecting(other);
-        if (OnGlobalObjectDetected != null)
-        {
-            foreach (var handler in OnGlobalObjectDetected.GetInvocationList())
-            {
-                var func = handler as Func<GameObject, GameObject>;
-                if (func != null)
-                    obj = func(other);
-            }
-        }
-        obj = OnGlobalObjectDetected?.Invoke(other);
-        OnGlobalObjectProcessed?.Invoke(obj);
-        OnGlobalObjectInspected?.Invoke(obj);
-        if (OnObjectDetected != null)
-        {
-            foreach (var handler in OnObjectDetected.GetInvocationList())
-            {
-                var func = handler as Func<GameObject, GameObject>;
-                if (func != null)
-                    obj = func(other);
-            }
-        }
-        obj = OnObjectDetected?.Invoke(other);
-        OnObjectProcessed?.Invoke(obj);
-        OnObjectInspected?.Invoke(obj);
-    }
-    public virtual void CollisionEnter2D(Collision2D collision)
-    {
-        OnEnter2D(collision.gameObject);
-    }
-    protected virtual void OnCollisionEnter2D(Collision2D collision)
-    {
-        CollisionEnter2D(collision);
-    }
-
-    public virtual void TriggerEnter2D(Collider2D collider)
-    {
-        OnEnter2D(collider.gameObject);
-    }
-    protected virtual void OnTriggerEnter2D(Collider2D collider)
-    {
-        TriggerEnter2D(collider);
-    }
-
-    public virtual void CollisionExit2D(Collision2D collision)
-    {
-    }
-    protected virtual void OnCollisionExit2D(Collision2D collision)
-    {
-        CollisionExit2D(collision);
-    }
-
-    public virtual void TriggerEnter(Collider collider)
-    {
-    }
-    protected virtual void OnTriggerEnter(Collider collider)
-    {
-        TriggerEnter(collider);
-    }
-
-    public virtual void TriggerStay(Collider collider)
-    {
-    }
-    protected virtual void OnTriggerStay(Collider collider)
-    {
-        TriggerStay(collider);
-    }
-
-    public virtual void TriggerExit(Collider collider)
-    {
-    }
-    protected virtual void OnTriggerExit(Collider collider)
-    {
-        TriggerExit(collider);
-    }
 }

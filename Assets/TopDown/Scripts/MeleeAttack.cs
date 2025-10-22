@@ -10,7 +10,7 @@ public class MeleeAttack : MonoController
     protected override void Update()
     {
         base.Update();
-        if (targetDistance <= attackRange)
+        if (spawnDistance <= attackRange)
         {
             agent.ResetPath();
             AttackMelee();

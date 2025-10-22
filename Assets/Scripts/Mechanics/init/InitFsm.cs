@@ -1,5 +1,8 @@
+using System.Collections;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class InitFsm : InitCoroutine
 {
     private AnimatorFSM fsm;
@@ -22,12 +25,12 @@ public class InitFsm : InitCoroutine
             fsm.ChangeState(new PlayerHurtState(animatorComponent, 80));
     }
 
-    public void OnAnimatorStateEnter(string stateId)
+    public IEnumerator OnAnimatorStateEnter(string stateId)
     {
         switch (stateId)
         {
             case "Idle":
-                fsm.ChangeState(new PlayerIdleState(animatorComponent, maxMoveSpeed));
+                fsm.ChangeState(new PlayerIdleState(animatorComponent, moveSpeed));
                 break;
             case "AttackMelee":
                 fsm.ChangeState(new PlayerMeleeAttackState(animatorComponent));
@@ -42,5 +45,6 @@ public class InitFsm : InitCoroutine
                 fsm.ChangeState(new PlayerDeathState(animatorComponent));
                 break;
         }
+        yield return null;
     }
 }

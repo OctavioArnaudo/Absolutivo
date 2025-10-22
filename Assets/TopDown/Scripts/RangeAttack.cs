@@ -7,7 +7,7 @@ public class RangeAttack : ProjectileShoot
     protected override void Update()
     {
         base.Update();
-        if (targetDistance <= visionRange)
+        if (spawnDistance <= visionRange)
         {
             agent.ResetPath();
             AttackRange();
@@ -20,7 +20,7 @@ public class RangeAttack : ProjectileShoot
         {
             lastAttackTime = Time.time;
             Debug.Log("¡Ataque a distancia!");
-            ShootProjectile();
+            ShootProjectile(projectilePrefab);
         }
     }
 }
